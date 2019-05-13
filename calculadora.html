@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Calc Festa</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/label   opper.js/1.14.7/umd/label  opper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav>
+            
+        </nav>
+        <form method="get" action="resultado.html">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><label for="">Convidados</label><input type="number" min="1" max="3"></div>
+                    <div class="col-md-3"><label for="">Não tomam álcool</label><input type="number" min="1" max="3"></div>
+                    <div class="col-md-3"><label for="">Comilões</label><input type="number" min="1" max="3"></div>
+                    <div class="col-md-3"><label for="">Beberrões</label><input type="number" min="1" max="3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2>Comidas</h2>
+                    </div>
+                    <div class="col-md-3">
+                        <h2>Doces</h2>
+                    </div>
+                    <div class="col-md-3">
+                        <h2>Bebidas sem álcool</h2>
+                    </div>
+                    <div class="col-md-3">
+                        <h2>Bebidas com álcool</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="checkbox" id="salgadinho">
+                            <label>Salgadinho</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="acai">
+                            <label>Açaí</label  >
+                    </div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="agua">
+                            <label>Água</label  >
+                    </div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="cerveja">
+                            <label>Cerveja</label   >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="checkbox" id="chips">
+                            <label>Chips</label >
+                    </div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="pirulito">
+                            <label>Pirulito</label  >
+                    </div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="refrigerante">
+                            <label>Refrigerante</label  >
+                    </div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="vodka">
+                            <label>Vodka</label >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="checkbox" id="pizza">
+                            <label>Pizza</label >
+                    </div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="bala">
+                            <label>Bala</label  >
+                    </div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="suco">
+                            <label>Suco</label  >
+                    </div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="kislla">
+                            <label>Kislla</label    >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="checkbox" id="salaminho">
+                            <label>Salaminho</label >
+                    </div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="chiclete">
+                            <label>Chiclete</label  >
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="corotinho">
+                            <label>Corotinho</label >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="checkbox" id="batata_frita">
+                            <label>Batata frita</label  >
+                    </div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="marshmallow">
+                            <label>Marshmallow</label   >
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="catuaba">
+                            <label>Catuaba</label   >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="checkbox" id="nuggets">
+                            <label>Nuggets</label   >
+                    </div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="mm">
+                            <label>M&Ms</label  >
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="ice">
+                            <label>Ice</label   >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="checkbox" id="mandioca_frita">
+                            <label>Mandioca frita</label    >
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="whiskey">
+                            <label>Whiskey</label   >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="checkbox" id="isca_carne">
+                            <label>Isca de carne</label >
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="tequila">
+                            <label>Tequila</label   >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" id="vinho">
+                            <label>Vinho</label >
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-3"></div>
+                        <div class="col-md-3"></div>
+                        <div class="col-md-3">
+                            <input type="checkbox" id="cachaca">
+                                <label>Cachaça</label   >
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-danger"  onclick="obterMarcados()">Calcular</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+    <script src="script.js"></script>
+</html>
