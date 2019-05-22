@@ -5,158 +5,168 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Calc Festa</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="http://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/label   opper.js/1.14.7/umd/label  opper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/label   opper.js/1.14.7/umd/label  opper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <nav>
-            
-        </nav>
+    <body class="bodyCalc">
         <form method="get" action="resultado.html" id="formulario">
-            <div class="container">
+            <div class="container boxCalc">
                 <div class="row">
-                    <div class="col-md-3"><label for="">Convidados</label><input type="number" id="convidados"></div>
-                    <div class="col-md-3"><label for="">Não tomam álcool</label><input type="number" id="semAlcool"></div>
-                    <div class="col-md-3"><label for="">Comilões</label><input type="number" id="comiloes"></div>
-                    <div class="col-md-3"><label for="">Beberrões</label><input type="number" id="beberroes"></div>
+                    <div class="col-md-3">
+                        <label for="">Convidados: </label><br>
+                        <input type="number" id="convidados">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="">Não tomam álcool: </label><br>
+                        <input type="number" id="semAlcool">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="">Comilões: </label><br>
+                        <input type="number" id="comiloes">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="">Beberrões: </label><br>
+                        <input type="number" id="beberroes">
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <h2>Comidas</h2>
+                        <h4>Comidas</h4>
                     </div>
                     <div class="col-md-3">
-                        <h2>Doces</h2>
+                        <h4>Doces</h4>
                     </div>
                     <div class="col-md-3">
-                        <h2>Bebidas sem álcool</h2>
+                        <h4>Bebidas sem álcool</h4>
                     </div>
                     <div class="col-md-3">
-                        <h2>Bebidas com álcool</h2>
+                        <h4>Bebidas com álcool</h4>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
                         <input type="checkbox" id="cSalgadinho" value="1">
-                            <label>Salgadinho</label>
+                        <label for="cSalgadinho">Salgadinho</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="dAçaí" value="1">
-                            <label>Açaí</label  >
+                        <input type="checkbox" id="dAcai" value="1">
+                            <label for="dAcai">Açaí</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="bÁgua" value="1">
-                            <label>Água</label  >
+                        <input type="checkbox" id="bAgua" value="1">
+                            <label for="bAgua">Água</label>
                     </div>
                     <div class="col-md-3">
                         <input type="checkbox" id="aCerveja" value="1">
-                            <label>Cerveja</label   >
+                            <label for="aCerveja">Cerveja</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
                         <input type="checkbox" id="cChips" value="1">
-                            <label>Chips</label >
+                            <label for="cChips">Chips</label>
                     </div>
                     <div class="col-md-3">
                         <input type="checkbox" id="dPirulito" value="1">
-                            <label>Pirulito</label  >
+                            <label for="dPirulito">Pirulito</label>
                     </div>
                     <div class="col-md-3">
                         <input type="checkbox" id="bRefrigerante" value="1">
-                            <label>Refrigerante</label  >
+                            <label for="bRefrigerante">Refrigerante</label>
                     </div>
                     <div class="col-md-3">
                         <input type="checkbox" id="aVodka" value="1">
-                            <label>Vodka</label >
+                            <label for="aVodka">Vodka</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
                         <input type="checkbox" id="cPizza" value="1">
-                            <label>Pizza</label >
+                            <label for="cPizza">Pizza</label >
                     </div>
                     <div class="col-md-3">
                         <input type="checkbox" id="dBala" value="1">
-                            <label>Bala</label  >
+                            <label for="dBala">Bala</label  >
                     </div>
                     <div class="col-md-3">
                         <input type="checkbox" id="bSuco" value="1">
-                            <label>Suco</label  >
+                            <label for="bSuco">Suco</label  >
                     </div>
                     <div class="col-md-3">
                         <input type="checkbox" id="aKislla" value="1">
-                            <label>Kislla</label    >
+                            <label for="aKislla">Kislla</label    >
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
                         <input type="checkbox" id="cSalaminho" value="1">
-                            <label>Salaminho</label >
+                            <label for="cSalaminho">Salaminho</label >
                     </div>
                     <div class="col-md-3">
                         <input type="checkbox" id="dChiclete" value="1">
-                            <label>Chiclete</label  >
+                            <label for="dChiclete">Chiclete</label  >
                     </div>
                     <div class="col-md-3"></div>
                     <div class="col-md-3">
                         <input type="checkbox" id="aCorotinho" value="1">
-                            <label>Corotinho</label >
+                            <label for="aCorotinho">Corotinho</label >
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <input type="checkbox" id="cBatata frita" value="1">
-                            <label>Batata frita</label  >
+                        <input type="checkbox" id="cBatatafrita" value="1">
+                            <label for="cBatatafrita">Batata frita</label  >
                     </div>
                     <div class="col-md-3">
                         <input type="checkbox" id="dMarshmallow" value="1">
-                            <label>Marshmallow</label   >
+                            <label for="dMarshmallow">Marshmallow</label   >
                     </div>
                     <div class="col-md-3"></div>
                     <div class="col-md-3">
                         <input type="checkbox" id="aCatuaba" value="1">
-                            <label>Catuaba</label   >
+                            <label for="aCatuaba">Catuaba</label   >
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
                         <input type="checkbox" id="cNuggets" value="1">
-                            <label>Nuggets</label   >
+                            <label for="cNuggets">Nuggets</label   >
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="dM&Ms" value="1">
-                            <label>M&Ms</label  >
+                        <input type="checkbox" id="dMMs" value="1">
+                            <label for="dMMs">M&Ms</label  >
                     </div>
                     <div class="col-md-3"></div>
                     <div class="col-md-3">
                         <input type="checkbox" id="aIce" value="1">
-                            <label>Ice</label   >
+                            <label for="aIce">Ice</label   >
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <input type="checkbox" id="cMandioca frita" value="1">
-                            <label>Mandioca frita</label    >
+                        <input type="checkbox" id="cMandiocafrita" value="1">
+                            <label for="cMandiocafrita">Mandioca frita</label    >
                     </div>
                     <div class="col-md-3"></div>
                     <div class="col-md-3"></div>
                     <div class="col-md-3">
                         <input type="checkbox" id="aWhiskey" value="1">
-                            <label>Whiskey</label   >
+                            <label for="aWhiskey">Whiskey</label   >
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <input type="checkbox" id="cIsca de Carne" value="1">
-                            <label>Isca de carne</label >
+                        <input type="checkbox" id="cIscaDeCarne" value="1">
+                            <label for="cIscaDeCarne">Isca de carne</label >
                     </div>
                     <div class="col-md-3"></div>
                     <div class="col-md-3"></div>
                     <div class="col-md-3">
                         <input type="checkbox" id="aTequila" value="1">
-                            <label>Tequila</label   >
+                            <label for="aTequila">Tequila</label   >
                     </div>
                 </div>
                 <div class="row">
@@ -165,7 +175,7 @@
                     <div class="col-md-3"></div>
                     <div class="col-md-3">
                         <input type="checkbox" id="aVinho" value="1">
-                            <label >Vinho</label >
+                            <label for="aVinho">Vinho</label >
                     </div>
                 </div>
                 <div class="row">
@@ -173,13 +183,13 @@
                         <div class="col-md-3"></div>
                         <div class="col-md-3"></div>
                         <div class="col-md-3">
-                            <input type="checkbox" id="aCachaça" value="1">
-                                <label>Cachaça</label >
+                            <input type="checkbox" id="aCachaca" value="1">
+                                <label for="aCachaca">Cachaça</label >
                         </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-danger"  onclick="obterMarcados()">Calcular</button>
+                        <button type="submit" class="btn btn-danger btnCalc"  onclick="obterMarcados()">Calcular</button>
                     </div>
                 </div>
             </div>
