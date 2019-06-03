@@ -17,10 +17,11 @@
     body,
     header,
     .view {
-      height: 100%;
+      height: 120%;
     }
 
     @media (max-width: 740px) {
+
       html,
       body,
       header,
@@ -30,6 +31,7 @@
     }
 
     @media (min-width: 800px) and (max-width: 850px) {
+
       html,
       body,
       header,
@@ -37,336 +39,315 @@
         height: 650px;
       }
     }
+
     @media (min-width: 800px) and (max-width: 850px) {
-              .navbar:not(.top-nav-collapse) {
-                  background: #1C2331!important;
-              }
-          }
-    
+      .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
+      }
+    }
+
     [type="checkbox"]:not(:checked),
     [type="checkbox"]:checked {
       position: absolute;
       left: -9999px;
     }
-    [type="checkbox"]:not(:checked) + label,
-    [type="checkbox"]:checked + label {
+
+    [type="checkbox"]:not(:checked)+label,
+    [type="checkbox"]:checked+label {
       position: relative;
       padding-left: 1.95em;
       cursor: pointer;
     }
 
-    [type="checkbox"]:not(:checked) + label:before,
-    [type="checkbox"]:checked + label:before {
+    [type="checkbox"]:not(:checked)+label:before,
+    [type="checkbox"]:checked+label:before {
       content: '';
       position: absolute;
-      left: 0; top: 0;
-      width: 1.25em; height: 1.25em;
+      left: 0;
+      top: 0;
+      width: 1.25em;
+      height: 1.25em;
       border: 2px solid #ccc;
       background: #fff;
       border-radius: 4px;
-      box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1);
     }
-    [type="checkbox"]:not(:checked) + label:after,
-    [type="checkbox"]:checked + label:after {
+
+    [type="checkbox"]:not(:checked)+label:after,
+    [type="checkbox"]:checked+label:after {
       content: '\2713\0020';
       position: absolute;
-      top: .15em; left: .22em;
+      top: .15em;
+      left: .22em;
       font-size: 1.3em;
       line-height: 0.8;
       color: #09ad7e;
       transition: all .2s;
       font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
     }
-    [type="checkbox"]:not(:checked) + label:after {
+
+    [type="checkbox"]:not(:checked)+label:after {
       opacity: 0;
       transform: scale(0);
     }
-    [type="checkbox"]:checked + label:after {
+
+    [type="checkbox"]:checked+label:after {
       opacity: 1;
       transform: scale(1);
     }
-    [type="checkbox"]:disabled:not(:checked) + label:before,
-    [type="checkbox"]:disabled:checked + label:before {
+
+    [type="checkbox"]:disabled:not(:checked)+label:before,
+    [type="checkbox"]:disabled:checked+label:before {
       box-shadow: none;
       border-color: #bbb;
       background-color: #ddd;
     }
-    [type="checkbox"]:disabled:checked + label:after {
+
+    [type="checkbox"]:disabled:checked+label:after {
       color: #999;
     }
-    [type="checkbox"]:disabled + label {
+
+    [type="checkbox"]:disabled+label {
       color: #aaa;
     }
-    [type="checkbox"]:checked:focus + label:before,
-    [type="checkbox"]:not(:checked):focus + label:before {
+
+    [type="checkbox"]:checked:focus+label:before,
+    [type="checkbox"]:not(:checked):focus+label:before {
       border: 2px dotted blue;
     }
-
   </style>
 
 </head>
 
 <body>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <strong>CalcFestas</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="calculadora.html" target="_blank">Calculadora</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav>
-    
-  <div class="view full-page-intro wrapper" style="background-image: url('img/amigos.jpg'); background-repeat: no-repeat; background-size: cover;">
-    <div class="pop-up">
-        <div class="pop-up-text">
-            <div class="card">
-                <div class="card-body">
-                <h3 class="dark-grey-text text-center">
-                  <strong>Resultado:</strong>
-                </h3>
-                <hr>
-                <div class="col-md-12">
-                    <input type="checkbox" id="bÁgua" value="1" checked disabled>
-                        <label for="bÁgua">Água - </label>
-                        <label for="bÁgua">1 litro</label>
-                </div>   
-                <hr>  
-                <div class="col-md-12">
-                    <input type="checkbox" id="bRefrigerante" value="1" checked disabled>
-                        <label for="bRefrigerante">Refrigerante - </label>
-                        <label for="bRefrigerante">10 litros</label>
-                </div>      
-              </div> 
-            </div>           
-          <a class="btn btn-indigo pop-up-button">Enviar resultado</a>
-        </div>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <strong>CalcFestas</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calculadora.html" target="_blank">Calculadora</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
+
+  <div class="view full-page-intro wrapper"
+    style="background-image: url('img/amigos.jpg'); background-repeat: no-repeat; background-size: cover;">
     <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
       <div class="container">
         <div class="row wow fadeIn">
-          <div class="col-md-6 mb-4 white-text text-center text-md-left">
+          <div class="col-md-12 mb-4 white-text text-center text-md-left">
             <h1 class="display-4 font-weight-bold">Proin nibh ipsum, egestas</h1>
             <hr class="hr-light">
             <p>
               <strong>Praesent at diam tincidunt</strong>
             </p>
             <p class="mb-4 d-none d-md-block">
-              <strong>Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam tincidunt, tempus ligula.</strong>
+              <strong>Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam tincidunt, tempus
+                ligula.</strong>
             </p>
             <a href="resultados.html" class="btn btn-indigo btn-lg">Veja feedbacks anteriores
             </a>
-              </div>
-          <div class="col-md-6 col-xl-5 mb-4">
+          </div>
+          <div class="col-md-12 col-xl-5 mb-4 desktopCenter">
             <div class="card">
               <div class="card-body">
-                <!-- Form cadastrar convidado-->
-                <form name="" style="display: none;">
-                  <h3 class="dark-grey-text text-center">
-                    <strong>Calculadora:</strong>
-                  </h3>
-                  <hr>
-                  <div class="md-form">
-                    <i class="fas fa-user prefix grey-text"></i>
-                    <input type="number" id="convidados" class="form-control">
-                    <label for="convidados">Numero de convidaos</label>
-                  </div>
-                  <div class="md-form">
-                    <i class="fas fa-times-circle prefix grey-text"></i>
-                    <input type="text" id="form2" class="form-control">
-                    <label for="form2">Numero de convidados que não bebem alcool</label>
-                  </div>
-                  <div class="md-form">
+                <form name="">
+                  <div class="tab" style="display:none;">
+                    <h3 class="dark-grey-text text-center">
+                      <strong>Calculadora:</strong>
+                    </h3>
+                    <hr>
+                    <div class="md-form">
+                      <i class="fas fa-user prefix grey-text"></i>
+                      <input type="number" id="convidados" class="form-control">
+                      <label for="convidados">Numero de convidaos</label>
+                    </div>
+                    <div class="md-form">
+                      <i class="fas fa-times-circle prefix grey-text"></i>
+                      <input type="text" id="form2" class="form-control">
+                      <label for="form2">Numero de convidados que não bebem alcool</label>
+                    </div>
+                    <div class="md-form">
                       <i class="fas fa-utensils prefix grey-text"></i>
                       <input type="number" id="comiloes" class="form-control">
                       <label for="comiloes">Numero de convidados comilões</label>
                     </div>
                     <div class="md-form">
-                        <i class="fas  fa-glass-cheers prefix grey-text"></i>
-                        <input type="number" id="beberroes" class="form-control">
-                        <label for="beberroes">Numero de convidados beberrões</label>
-                      </div>
-                  
-                  <div class="text-center">
-                    <button class="btn btn-indigo">Próximo</button>
+                      <i class="fas  fa-glass-cheers prefix grey-text"></i>
+                      <input type="number" id="beberroes" class="form-control">
+                      <label for="beberroes">Numero de convidados beberrões</label>
+                    </div>
                   </div>
-                </form>
-                <!-- Form -->
-
-                <!-- Form adicionar comidas-->
-                <form name="comidas" style="margin-top: -10px; display: none;">
+                  <div class="tab">
                     <h3 class="dark-grey-text text-center">
                       <strong>Comidas:</strong>
                     </h3>
                     <hr>
                     <h4>Aperitivos: </h4>
                     <div class="col-md-3">
-                        <input type="checkbox" id="cSalgadinho" value="1">
-                        <label for="cSalgadinho">Salgadinho</label>
+                      <input type="checkbox" id="cSalgadinho" value="1">
+                      <label for="cSalgadinho">Salgadinho</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="cChips" value="1">
-                            <label for="cChips">Chips</label>
+                      <input type="checkbox" id="cChips" value="1">
+                      <label for="cChips">Chips</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="cPizza" value="1">
-                            <label for="cPizza">Pizza</label >
+                      <input type="checkbox" id="cPizza" value="1">
+                      <label for="cPizza">Pizza</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="cSalaminho" value="1">
-                            <label for="cSalaminho">Salaminho</label >
+                      <input type="checkbox" id="cSalaminho" value="1">
+                      <label for="cSalaminho">Salaminho</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="cBatata frita" value="1">
-                            <label for="cBatata frita">Batata frita</label  >
+                      <input type="checkbox" id="cBatata frita" value="1">
+                      <label for="cBatata frita">Batata frita</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="cNuggets" value="1">
-                            <label for="cNuggets">Nuggets</label   >
+                      <input type="checkbox" id="cNuggets" value="1">
+                      <label for="cNuggets">Nuggets</label>
                     </div>
 
                     <h4>Doces: </h4>
                     <div class="col-md-3">
-                        <input type="checkbox" id="dAçaí" value="1">
-                            <label for="dAçaí">Açaí</label>
+                      <input type="checkbox" id="dAçaí" value="1">
+                      <label for="dAçaí">Açaí</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="dPirulito" value="1">
-                            <label for="dPirulito">Pirulito</label>
+                      <input type="checkbox" id="dPirulito" value="1">
+                      <label for="dPirulito">Pirulito</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="dBala" value="1">
-                            <label for="dBala">Bala</label  >
+                      <input type="checkbox" id="dBala" value="1">
+                      <label for="dBala">Bala</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="dChiclete" value="1">
-                            <label for="dChiclete">Chiclete</label  >
+                      <input type="checkbox" id="dChiclete" value="1">
+                      <label for="dChiclete">Chiclete</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="dMarshmallow" value="1">
-                            <label for="dMarshmallow">Marshmallow</label   >
+                      <input type="checkbox" id="dMarshmallow" value="1">
+                      <label for="dMarshmallow">Marshmallow</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="dM&Ms" value="1">
-                            <label for="dM&Ms">M&Ms</label  >
+                      <input type="checkbox" id="dM&Ms" value="1">
+                      <label for="dM&Ms">M&Ms</label>
                     </div>
-
-                    <div class="text-center">
-                      <button class="btn btn-indigo">Próximo</button>
-                    </div>
-                  </form>
-                  <!-- Form adicionar comidas -->
-
-                <!-- Form adicionar bebidas-->
-                <form name="comidas" style="margin-top: -10px; display: none;">
+                  </div>
+                  <div class="tab" style="display:none;">
                     <h3 class="dark-grey-text text-center">
                       <strong>Bebidas:</strong>
                     </h3>
                     <hr>
                     <h4>Bebidas sem alcool: </h4>
                     <div class="col-md-3">
-                        <input type="checkbox" id="bÁgua" value="1">
-                            <label for="bÁgua">Água</label>
+                      <input type="checkbox" id="bÁgua" value="1">
+                      <label for="bÁgua">Água</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="bRefrigerante" value="1">
-                            <label for="bRefrigerante">Refrigerante</label>
+                      <input type="checkbox" id="bRefrigerante" value="1">
+                      <label for="bRefrigerante">Refrigerante</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="bSuco" value="1">
-                            <label for="bSuco">Suco</label  >
+                      <input type="checkbox" id="bSuco" value="1">
+                      <label for="bSuco">Suco</label>
                     </div>
-                    
+
                     <h4>Bebidas com alcool: </h4>
 
                     <div class="col-md-3">
-                        <input type="checkbox" id="aCerveja" value="1">
-                            <label for="aCerveja">Cerveja</label>
+                      <input type="checkbox" id="aCerveja" value="1">
+                      <label for="aCerveja">Cerveja</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="aVodka" value="1">
-                            <label for="aVodka">Vodka</label>
+                      <input type="checkbox" id="aVodka" value="1">
+                      <label for="aVodka">Vodka</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="aKislla" value="1">
-                            <label for="aKislla">Kislla</label    >
+                      <input type="checkbox" id="aKislla" value="1">
+                      <label for="aKislla">Kislla</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="aCorotinho" value="1">
-                            <label for="aCorotinho">Corotinho</label >
+                      <input type="checkbox" id="aCorotinho" value="1">
+                      <label for="aCorotinho">Corotinho</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="aCatuaba" value="1">
-                            <label for="aCatuaba">Catuaba</label   >
+                      <input type="checkbox" id="aCatuaba" value="1">
+                      <label for="aCatuaba">Catuaba</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="aIce" value="1">
-                            <label for="aIce">Ice</label   >
+                      <input type="checkbox" id="aIce" value="1">
+                      <label for="aIce">Ice</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="aWhiskey" value="1">
-                            <label for="aWhiskey">Whiskey</label   >
+                      <input type="checkbox" id="aWhiskey" value="1">
+                      <label for="aWhiskey">Whiskey</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="aTequila" value="1">
-                            <label for="aTequila">Tequila</label   >
+                      <input type="checkbox" id="aTequila" value="1">
+                      <label for="aTequila">Tequila</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="aVinho" value="1">
-                            <label for="aVinho">Vinho</label >
+                      <input type="checkbox" id="aVinho" value="1">
+                      <label for="aVinho">Vinho</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="checkbox" id="aCachaça" value="1">
-                            <label for="aCachaça">Cachaça</label >
+                      <input type="checkbox" id="aCachaça" value="1">
+                      <label for="aCachaça">Cachaça</label>
                     </div>
-                    <div class="text-center">
-                      <button class="btn btn-indigo">Exibir resultado</button>
-                    </div>
-                  </form>
-                  <!-- Form adicionar bebidas -->
-
-                  <!-- Form resultado-->
-                <form name="comidas" style="margin-top: -10px;">
+                  </div>
+                  <div class="tab" style="display:none;">
                     <h3 class="dark-grey-text text-center">
                       <strong>Resultado:</strong>
                     </h3>
                     <hr>
                     <div class="col-md-12">
-                        <input type="checkbox" id="bÁgua" value="1" checked disabled>
-                            <label for="bÁgua">Água - </label>
-                            <label for="bÁgua">1 litro</label>
-                    </div>   
-                    <hr>  
-                    <div class="col-md-12">
-                        <input type="checkbox" id="bRefrigerante" value="1" checked disabled>
-                            <label for="bRefrigerante">Refrigerante - </label>
-                            <label for="bRefrigerante">10 litros</label>
-                    </div>                
-                    <div class="text-center">
-                      <button class="btn btn-indigo pop-up-button">Visualizar resultado</button>
-                      <ul class="share-links">
-                          <li class="facebook"><a href="#"><span class="fontawesome-facebook"></span></a></li>
-                          <li class="twitter"><a href="#"><span class="fontawesome-twitter"></span></a></li>
-                          <li class="googleplus"><a href="#"><span class="fontawesome-google-plus"></span></a></li>
-                        </ul>
+                      <input type="checkbox" id="bÁgua" value="1" checked disabled>
+                      <label for="bÁgua">Água - </label>
+                      <label for="bÁgua">1 litro</label>
                     </div>
-                  </form>
-                  <!-- Form resultado -->
+                    <hr>
+                    <div class="col-md-12">
+                      <input type="checkbox" id="bRefrigerante" value="1" checked disabled>
+                      <label for="bRefrigerante">Refrigerante - </label>
+                      <label for="bRefrigerante">10 litros</label>
+                    </div>
+                  </div>
+
+                  <div class="text-center">
+                      <button type="button" class="btn btn-indigo btnCalc" id="nextBtn" onclick="nextPrev(1)">Próximo</button>
+                      <button type="button" class="btn btnCalc btnPrev" id="prevBtn" onclick="nextPrev(-1)" style="display: none;">Anterior</button>
+                    <ul class="share-links" style="display:none;">
+                      <li class="facebook"><a href="#"><span class="fontawesome-facebook"></span></a></li>
+                      <li class="twitter"><a href="#"><span class="fontawesome-twitter"></span></a></li>
+                      <li class="googleplus"><a href="#"><span class="fontawesome-google-plus"></span></a></li>
+                    </ul>
+                  </div>
+                  <br>
+                <div class="progress">
+                      <span class="etapa"></span>
+                      <span class="etapa"></span>
+                      <span class="etapa"></span>
+                      <span class="etapa"></span>
+                    </div>
+                </form>
+
               </div>
             </div>
           </div>
@@ -374,18 +355,11 @@
       </div>
     </div>
   </div>
-  <script>
-      $(document).ready(function () {
-        $('.pop-up-button').click(function () {
-          $('.wrapper').toggleClass('show');
-        });
-      });
-  </script>
   <footer class="page-footer text-center font-small mt-4 wow fadeIn" style="margin-top: 0 !important;">
-      <div class="footer-copyright py-3">
-        © 2019 Copyright:
-        <a href="#"> DayDev </a>
-      </div>
+    <div class="footer-copyright py-3">
+      © 2019 Copyright:
+      <a href="#"> DayDev </a>
+    </div>
   </footer>
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/popper.min.js"></script>
