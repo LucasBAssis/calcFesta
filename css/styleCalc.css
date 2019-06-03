@@ -225,70 +225,84 @@ a {
 }
 
 
-
-
-
-
-*, *:before, *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+.btnPrev{
+  background-color: #bbbbbb !important;
+  color: #fff !important;
+}
+.btnPrev:hover{
+  background-color: #6c757d;
 }
 
-.pop-up {
-    width: 50%;
-    margin: 100px auto;
-    background: #fff;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.75);
-    opacity: 0;
-    transition: all 0.2s cubic-bezier(0.12, 0.13, 0.14, 0.15);
-}
-.pop-up .pop-up-text {
-  text-align: center;
-  padding-bottom: 25px;
-  color: #4f4f4f;
-  pointer-events: none;
-  font-size: 18px;
-}
-.pop-up .pop-up-text h1 {
-  font-size: 1.8em;
-  padding-top: 10px;
-  font-weight: normal;
-}
-.pop-up .pop-up-text p {
-  font-size: 1.2em;
-  margin-top: 20px;
-}
-.pop-up .pop-up-text a {
-  color: #fff;
-  margin-top: 20px;
-  display: block;
-  text-decoration: none;
-  font-size: 20px;
+.btnCalc{
+  float:right;
 }
 
-.show .pop-up {
+.progress{
+  text-align:center;
+  margin-top:40px;
+}
+
+.etapa {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.etapa.active {
   opacity: 1;
-  position: relative;
-  z-index: 99999999999;
-}
-.show .pop-up-text a {
-  pointer-events: auto;
 }
 
-@media screen and (max-width: 650px) {
-  .pop-up {
-    width: 80%;
-  }
-  .pop-up .pop-up-text {
-    font-size: .8em;
-  }
+.etapa.finish {
+  background-color: #3f51b5;
+}
 
-  .pop-up-button {
-    font-size: .8em;
-    width: 80px;
-    height: 40px;
-    line-height: 40px;
+.desktopCenter{
+  left: 29%;
+}
+@media (max-width:1200px){
+  .desktopCenter{
+    left: 0%;
   }
+}
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.containerComent {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.containerComent::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.containerComent img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.containerComent img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
 }
