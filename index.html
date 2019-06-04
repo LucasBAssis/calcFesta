@@ -163,18 +163,57 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" style="color: black;">Login</h4>
+          <h4 class="modal-title" style="color: black;">Registre-se</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" id="registre">
           <div class="form-group">
             <label class="control-label" style="color: black;">Usuário:</label><br>
-            <input name="username" type="text" class="form-control" placeholder="Username">
+            <input name="username" type="text" class="form-control" placeholder="Crie um nome de usuario">
+          </div>
+          <div class="form-group">
+            <label class="control-label" style="color: black;">Email:</label><br>
+            <input name="email" type="email" class="form-control" placeholder="Insira seu melhor e-mail">
           </div>
           <div class="form-group">
             <label class="control-label" style="color: black;">Senha:</label><br>
-            <input name="password" type="password" class="form-control" placeholder="Password">
+            <input name="password" type="password" class="form-control" placeholder="Senha">
+          </div>
+          <div class="form-group">
+            <label class="control-label" style="color: black;">Sua data de nascimento:</label><br>
+            <input name="data" type="date" class="form-control" placeholder="Senha">
+          </div>
+          <div class="modal-footer">
+            <button class="bntLoginModal" id="modalLogin"
+              style="font-size: 10px;background-color: white;border: none;">Ja tem uma conta? Faça login</button>
+            <button type="button" class="btn btn-success" style="background-color: #de4ecc!important"
+              onclick="window.location.href = './examples/dashboard.html'">Registra-se</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal" id="myModalLogin" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+    style="margin-top:75px">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="color: black;">Login</h4>
+          <button id="closeModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body" id="login">
+          <div class="form-group">
+            <label class="control-label" style="color: black;">Usuário:</label><br>
+            <input name="username" type="text" class="form-control" placeholder="Nome de usuario">
+          </div>
+          <div class="form-group">
+            <label class="control-label" style="color: black;">Senha:</label><br>
+            <input name="password" type="password" class="form-control" placeholder="Senha">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-success" style="background-color: #de4ecc!important"
@@ -184,6 +223,8 @@
       </div>
     </div>
   </div>
+
+
 
   <main>
     <div class="container">
@@ -508,7 +549,7 @@
     var btn4 = document.getElementById("myBtn4");
     var span = document.getElementsByClassName("close")[0];
 
-    
+
     btn.onclick = function () {
       modal.style.display = "block";
     }
@@ -522,18 +563,32 @@
     }
 
     //btn4.onclick = function () {
-      //modal.style.display = "block";
+    //modal.style.display = "block";
     //}
 
     span.onclick = function () {
       modal.style.display = "none";
-      }
+    }
 
     window.onclick = function (event) {
       if (event.target == modal) {
         modal.style.display = "none";
       }
     }
+
+    $(document).ready(function () {
+      $('#modalLogin').click(function () {
+        $("#myModalLogin").show();
+        $("#myModal").hide();
+      });
+    });
+
+    $(document).ready(function () {
+      $('#closeModal').click(function () {
+        $("#myModalLogin").hide();
+      });
+    });
+
   </script>
 </body>
 
