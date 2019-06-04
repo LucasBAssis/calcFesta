@@ -2,67 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CalcFestas</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
-    
-    <style type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CalcFestas</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/styleCalc.css" rel="stylesheet">
+
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .carousel {
+      height: 60vh;
+    }
+
+    @media (max-width: 740px) {
 
       html,
       body,
       header,
       .carousel {
-        height: 60vh;
+        height: 100vh;
       }
+    }
 
-      @media (max-width: 740px) {
-        html,
-        body,
-        header,
-        .carousel {
-          height: 100vh;
-        }
+    @media (min-width: 800px) and (max-width: 850px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
       }
+    }
 
-      @media (min-width: 800px) and (max-width: 850px) {
-        html,
-        body,
-        header,
-        .carousel {
-          height: 100vh;
-        }
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
       }
-
-      @media (min-width: 800px) and (max-width: 850px) {
-              .navbar:not(.top-nav-collapse) {
-                  background: #1C2331!important;
-              }
-          }
-
-      
-    </style>
-	<!--<script language=javascript type="text/javascript">
-		function criarPopup(){
-		newWindow = window.open ('', 'pagina');
-		newWindow.document.write ("Este é um novo popup <br/> <img src='imagem.jpg' width='100' height='100'>");
-		}
-	</script>-->
+    }
+  </style>
 </head>
 
-<body>
-
+<body style="color: white; background-color: #1e1e2e;font-family: 'Poppins', sans-serif;">
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <strong>CalcFestas</strong>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
@@ -79,7 +73,8 @@
 
       <!--primeiro slide-->
       <div class="carousel-item active">
-        <div class="view" style="background-image: url('img/churrasco.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <div class="view"
+          style="background-image: url('img/churrasco.jpg'); background-repeat: no-repeat; background-size: cover;">
           <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
@@ -89,13 +84,14 @@
                 <strong>A site ideal para você calcular sua festa</strong>
               </p>
               <p class="mb-4 d-none d-md-block">
-                <strong>Se cadastre para calcular sua festa, compartilhar seus resultados e ver o resultado de outras pessoas que também organizaram festas.</strong>
+                <strong>Se cadastre para calcular sua festa, compartilhar seus resultados e ver o resultado de outras
+                  pessoas que também organizaram festas.</strong>
               </p>
               <!--<a href="#" class="btn btn-outline-white btn-lg">Faça Login
               </a>-->
-              <button type="button" id="myBtn" class="btn btn-outline-white btn-lg">
-              Faça Login</button>
-              
+              <button type="button" id="myBtn" class="btn btn-outline-white btn-lg btnLogin">
+                Registra-se ou faça login</button>
+
             </div>
           </div>
         </div>
@@ -104,7 +100,8 @@
 
       <!-- segundo slide-->
       <div class="carousel-item">
-        <div class="view" style="background-image: url('img/festa_junina.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <div class="view"
+          style="background-image: url('img/festa_junina.jpg'); background-repeat: no-repeat; background-size: cover;">
           <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
@@ -114,12 +111,11 @@
                 <strong>A site ideal para você calcular sua festa</strong>
               </p>
               <p class="mb-4 d-none d-md-block">
-                <strong>Se cadastre para calcular sua festa, compartilhar seus resultados e ver o resultado de outras pessoas que também organizaram festas.</strong>
+                <strong>Se cadastre para calcular sua festa, compartilhar seus resultados e ver o resultado de outras
+                  pessoas que também organizaram festas.</strong>
               </p>
-              <!--<a href="#" class="btn btn-outline-white btn-lg">Faça Login
-              </a>-->
-              <button type="button" id="myBtn2" class="btn btn-outline-white btn-lg">
-                  Faça Login</button>
+              <button type="button" id="myBtn2" class="btn btn-outline-white btn-lg btnLogin">
+                Registra-se ou faça login</button>
             </div>
           </div>
         </div>
@@ -128,7 +124,8 @@
 
       <!--terceiro slide-->
       <div class="carousel-item">
-        <div class="view" style="background-image: url('img/festalivre.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <div class="view"
+          style="background-image: url('img/festalivre.jpg'); background-repeat: no-repeat; background-size: cover;">
           <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
             <div class="text-center white-text mx-5 wow fadeIn">
               <h1 class="mb-4">
@@ -138,12 +135,11 @@
                 <strong>A site ideal para você calcular sua festa</strong>
               </p>
               <p class="mb-4 d-none d-md-block">
-                <strong>Se cadastre para calcular sua festa, compartilhar seus resultados e ver o resultado de outras pessoas que também organizaram festas.</strong>
+                <strong>Se cadastre para calcular sua festa, compartilhar seus resultados e ver o resultado de outras
+                  pessoas que também organizaram festas.</strong>
               </p>
-              <!--<a href="#" class="btn btn-outline-white btn-lg">Faça Login
-              </a>-->
-              <button type="button" id="myBtn3" class="btn btn-outline-white btn-lg">
-                  Faça Login</button>
+              <button type="button" id="myBtn3" class="btn btn-outline-white btn-lg btnLogin">
+                Registra-se ou faça login</button>
             </div>
           </div>
         </div>
@@ -162,13 +158,14 @@
   </div>
 
   <!-- Modal -->
-  <div class="modal" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:75px">
+  <div class="modal" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+    style="margin-top:75px">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" style="color: black;">Login</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span></button>
+            <span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <div class="form-group">
@@ -180,7 +177,8 @@
             <input name="password" type="password" class="form-control" placeholder="Password">
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success" style="background-color: #3f51b5!important" onclick="window.location.href = './calculadora.html'">Login</button>
+            <button type="button" class="btn btn-success" style="background-color: #de4ecc!important"
+              onclick="window.location.href = './examples/dashboard.html'">Login</button>
           </div>
         </div>
       </div>
@@ -189,145 +187,125 @@
 
   <main>
     <div class="container">
-
       <section>
-            <h2 class="my-5 h3 text-center">Por que fazemos isso?</h2>
-    
-            <!--First row-->
-            <div class="row features-small mb-5 mt-3 wow fadeIn">
-    
-              <!--First column-->
-              <div class="col-md-4">
-                <!--First row-->
-                <div class="row">
-                  <div class="col-2">
-                    <i class="fas fa-check-circle fa-2x indigo-text"></i>
+        <h2 class="my-5 h3 text-center">Por que fazemos isso?</h2>
+
+        <div class="row features-small mb-5 mt-3 wow fadeIn">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-Text" style="color:#de4ecc!important""></i>
                   </div>
-                  <div class="col-10">
-                    <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
-                    <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam id consequat diam
-                    </p>
-                    <div style="height:15px"></div>
-                  </div>
-                </div>
-                <!--/First row-->
-    
-                <!--Second row-->
-                <div class="row">
-                  <div class="col-2">
-                    <i class="fas fa-check-circle fa-2x indigo-text"></i>
-                  </div>
-                  <div class="col-10">
-                    <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
-                    <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam id consequat diam
-                    </p>
-                    <div style="height:15px"></div>
-                  </div>
-                </div>
-                <!--/Second row-->
-    
-                <!--Third row-->
-                <div class="row">
-                  <div class="col-2">
-                    <i class="fas fa-check-circle fa-2x indigo-text"></i>
-                  </div>
-                  <div class="col-10">
-                    <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
-                    <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam id consequat diam
-                    </p>
-                    <div style="height:15px"></div>
-                  </div>
-                </div>
-                <!--/Third row-->
-    
-                <!--Fourth row-->
-                <div class="row">
-                  <div class="col-2">
-                    <i class="fas fa-check-circle fa-2x indigo-text"></i>
-                  </div>
-                  <div class="col-10">
-                    <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
-                    <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam id consequat diam
-                    </p>
-                    <div style="height:15px"></div>
-                  </div>
-                </div>
-                <!--/Fourth row-->
+                  <div class=" col-10">
+                  <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
+                  <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam
+                    id consequat diam
+                  </p>
+                  <div style="height:15px"></div>
               </div>
-              <!--/First column-->
-    
-              <!--Second column-->
-              <div class="col-md-4 flex-center">
-                <img src="img/churras.jpg" alt="churrasssss" class="z-depth-0 img-fluid">
-              </div>
-              <!--/Second column-->
-    
-              <!--Third column-->
-              <div class="col-md-4 mt-2">
-                <!--First row-->
-                <div class="row">
-                  <div class="col-2">
-                    <i class="fas fa-check-circle fa-2x indigo-text"></i>
-                  </div>
-                  <div class="col-10">
-                    <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
-                    <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam id consequat diam
-                    </p>
-                    <div style="height:15px"></div>
-                  </div>
-                </div>
-                <!--/First row-->
-    
-                <!--Second row-->
-                <div class="row">
-                  <div class="col-2">
-                    <i class="fas fa-check-circle fa-2x indigo-text"></i>
-                  </div>
-                  <div class="col-10">
-                    <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
-                    <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam id consequat diam
-                    </p>
-                    <div style="height:15px"></div>
-                  </div>
-                </div>
-                <!--/Second row-->
-    
-                <!--Third row-->
-                <div class="row">
-                  <div class="col-2">
-                    <i class="fas fa-check-circle fa-2x indigo-text"></i>
-                  </div>
-                  <div class="col-10">
-                    <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
-                    <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam id consequat diam
-                    </p>
-                    <div style="height:15px"></div>
-                  </div>
-                </div>
-                <!--/Third row-->
-    
-                <!--Fourth row-->
-                <div class="row">
-                  <div class="col-2">
-                    <i class="fas fa-check-circle fa-2x indigo-text"></i>
-                  </div>
-                  <div class="col-10">
-                    <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
-                    <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam id consequat diam
-                    </p>
-                    <div style="height:15px"></div>
-                  </div>
-                </div>
-                <!--/Fourth row-->
-              </div>
-              <!--/Third column-->
-    
             </div>
-            <!--/First row-->
-    
+
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-Text" style="color:#de4ecc!important""></i>
+                  </div>
+                  <div class=" col-10">
+                  <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
+                  <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam
+                    id consequat diam
+                  </p>
+                  <div style="height:15px"></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-Text" style="color:#de4ecc!important""></i>
+                  </div>
+                  <div class=" col-10">
+                  <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
+                  <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam
+                    id consequat diam
+                  </p>
+                  <div style="height:15px"></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-Text" style="color:#de4ecc!important""></i>
+                  </div>
+                  <div class=" col-10">
+                  <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
+                  <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam
+                    id consequat diam
+                  </p>
+                  <div style="height:15px"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 flex-center">
+            <img src="img/churras.jpg" alt="churrasssss" class="z-depth-0 img-fluid">
+          </div>
+
+          <div class="col-md-4 mt-2">
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-Text" style="color:#de4ecc!important""></i>
+                  </div>
+                  <div class=" col-10">
+                  <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
+                  <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam
+                    id consequat diam
+                  </p>
+                  <div style="height:15px"></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-Text" style="color:#de4ecc!important""></i>
+                  </div>
+                  <div class=" col-10">
+                  <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
+                  <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam
+                    id consequat diam
+                  </p>
+                  <div style="height:15px"></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-Text" style="color:#de4ecc!important""></i>
+                  </div>
+                  <div class=" col-10">
+                  <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
+                  <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam
+                    id consequat diam
+                  </p>
+                  <div style="height:15px"></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-Text" style="color:#de4ecc!important""></i>
+                  </div>
+                  <div class=" col-10">
+                  <h6 class="feature-title">Lorem ipsum dolor sit amet, consectetur</h6>
+                  <p class="grey-text">Phasellus viverra augue non augue euismod aliquet. Etiam at libero nibh. Aliquam
+                    id consequat diam
+                  </p>
+                  <div style="height:15px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <hr class="my-5">
+      <hr class="my-5 hr">
 
       <section>
         <h3 class="h3 text-center mb-5">Como calculamos sua festa!</h3>
@@ -347,7 +325,8 @@
               </div>
               <div class="col-10">
                 <h5 class="feature-title">Lorem ipsum do</h5>
-                <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra augue non augue eu
+                <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra augue
+                  non augue eu
                   ismod aliquet. Etiam a
                 </p>
               </div>
@@ -358,7 +337,8 @@
               </div>
               <div class="col-10">
                 <h5 class="feature-title">Lorem ipsum dolor si</h5>
-                <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra augue non 
+                <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra augue
+                  non
                   augue euismod aliquet. Etiam at libero nibh. Aliquam id consequatz.</p>
               </div>
             </div>
@@ -366,163 +346,141 @@
           <div class="col-lg-6 col-md-12">
             <p class="h5 text-center mb-4">Assista esse videozinho sobre como calcular sua festa ;)</p>
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xErmvtq3ISc" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xErmvtq3ISc"
+                allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </section>
 
-      <hr class="mb-5">
+      <hr class="mb-5 hr">
 
       <section>
-
         <h2 class="my-5 h3 text-center">Porquê usar a CalcFestas:</h2>
 
-        <!--First row-->
         <div class="row features-small mt-5 wow fadeIn">
-
-          <!--Grid column-->
           <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
             <div class="row">
               <div class="col-2">
-                  <i class="fas fa-question fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+                <i class="fas fa-question fa-2x mb-1 indigo-Text" style="color:#de4ecc!important"" aria-hidden="
+                  true"></i>
               </div>
               <div class="col-10 mb-2 pl-3">
                 <h5 class="feature-title font-bold mb-1">Phasellus viverra</h5>
-                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam tincidunt, tempus ligula
+                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam
+                  tincidunt, tempus ligula
                 </p>
               </div>
             </div>
-            <!--/Grid row-->
           </div>
-          <!--/Grid column-->
 
-          <!--Grid column-->
           <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
             <div class="row">
               <div class="col-2">
-                  <i class="fas fa-question fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+                <i class="fas fa-question fa-2x mb-1 indigo-Text" style="color:#de4ecc!important"" aria-hidden="
+                  true"></i>
               </div>
               <div class="col-10 mb-2">
                 <h5 class="feature-title font-bold mb-1">Phasellus viverra</h5>
-                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam tincidunt, tempus ligula
+                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam
+                  tincidunt, tempus ligula
                 </p>
               </div>
             </div>
-            <!--/Grid row-->
           </div>
-          <!--/Grid column-->
 
-          <!--Grid column-->
           <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
             <div class="row">
               <div class="col-2">
-                  <i class="fas fa-question fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+                <i class="fas fa-question fa-2x mb-1 indigo-Text" style="color:#de4ecc!important"" aria-hidden="
+                  true"></i>
               </div>
               <div class="col-10 mb-2">
                 <h5 class="feature-title font-bold mb-1">Phasellus viverra</h5>
-                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam tincidunt, tempus ligula
+                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam
+                  tincidunt, tempus ligula
                 </p>
               </div>
             </div>
-            <!--/Grid row-->
           </div>
-          <!--/Grid column-->
 
-          <!--Grid column-->
           <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
             <div class="row">
               <div class="col-2">
-                  <i class="fas fa-question fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+                <i class="fas fa-question fa-2x mb-1 indigo-Text" style="color:#de4ecc!important"" aria-hidden="
+                  true"></i>
               </div>
               <div class="col-10 mb-2">
                 <h5 class="feature-title font-bold mb-1">Phasellus viverra</h5>
-                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam tincidunt, tempus ligula
+                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam
+                  tincidunt, tempus ligula
                   it.
                 </p>
               </div>
             </div>
-            <!--/Grid row-->
           </div>
-          <!--/Grid column-->
-
         </div>
-        <!--/First row-->
 
-        <!--Second row-->
         <div class="row features-small mt-4 wow fadeIn">
 
-          <!--Grid column-->
           <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
             <div class="row">
               <div class="col-2">
-                  <i class="fas fa-question fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+                <i class="fas fa-question fa-2x mb-1 indigo-Text" style="color:#de4ecc!important"" aria-hidden="
+                  true"></i>
               </div>
               <div class="col-10 mb-2">
                 <h5 class="feature-title font-bold mb-1">Phasellus viverra</h5>
-                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam tincidunt, tempus ligula</p>
+                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam
+                  tincidunt, tempus ligula</p>
               </div>
             </div>
-            <!--/Grid row-->
           </div>
-          <!--/Grid column-->
 
-          <!--Grid column-->
           <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
             <div class="row">
               <div class="col-2">
-                <i class="fas fa-question fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+                <i class="fas fa-question fa-2x mb-1 indigo-Text" style="color:#de4ecc!important"" aria-hidden="
+                  true"></i>
               </div>
               <div class="col-10 mb-2">
                 <h5 class="feature-title font-bold mb-1">Phasellus viverra</h5>
-                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam tincidunt, tempus ligula
+                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam
+                  tincidunt, tempus ligula
                 </p>
               </div>
             </div>
-            <!--/Grid row-->
           </div>
-          <!--/Grid column-->
 
-          <!--Grid column-->
           <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
             <div class="row">
               <div class="col-2">
-                  <i class="fas fa-question fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+                <i class="fas fa-question fa-2x mb-1 indigo-Text" style="color:#de4ecc!important"" aria-hidden="
+                  true"></i>
               </div>
               <div class="col-10 mb-2">
                 <h5 class="feature-title font-bold mb-1">Phasellus viverra</h5>
-                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam tincidunt, tempus ligula</p>
+                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam
+                  tincidunt, tempus ligula</p>
               </div>
             </div>
-            <!--/Grid row-->
           </div>
-          <!--/Grid column-->
 
-          <!--Grid column-->
           <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
             <div class="row">
               <div class="col-2">
-                  <i class="fas fa-question fa-2x mb-1 indigo-text" aria-hidden="true"></i>
+                <i class="fas fa-question fa-2x mb-1 indigo-Text" style="color:#de4ecc!important"" aria-hidden="
+                  true"></i>
               </div>
               <div class="col-10 mb-2">
                 <h5 class="feature-title font-bold mb-1">Phasellus viverra</h5>
-                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam tincidunt, tempus ligula</p>
+                <p class="grey-text mt-2">Proin nibh ipsum, egestas a varius sed, malesuada non odio. Praesent at diam
+                  tincidunt, tempus ligula</p>
               </div>
             </div>
-            <!--/Grid row-->
           </div>
-          <!--/Grid column-->
 
         </div>
-        <!--/Second row-->
 
       </section>
 
@@ -534,64 +492,48 @@
       <a href="#"> DayDev </a>
     </div>
   </footer>
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
   <script type="text/javascript">
     new WOW().init();
   </script>
 
-<script>
-  // Get the modal
-  var modal = document.getElementById("myModal");
-  
-  // Get the button that opens the modal
-  var btn = document.getElementById("myBtn");
+  <script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var btn2 = document.getElementById("myBtn2");
+    var btn3 = document.getElementById("myBtn3");
+    var btn4 = document.getElementById("myBtn4");
+    var span = document.getElementsByClassName("close")[0];
 
-  // Get the button that opens the modal
-  var btn2 = document.getElementById("myBtn2");
-
-  // Get the button that opens the modal
-  var btn3 = document.getElementById("myBtn3");
-
-  // Get the button that opens the modal
-  var btn4 = document.getElementById("myBtn4");
-  
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-  
-  // When the user clicks the button, open the modal 
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
-
-  // When the user clicks the button, open the modal 
-  btn2.onclick = function() {
-    modal.style.display = "block";
-  }
-  
-  // When the user clicks the button, open the modal 
-  btn3.onclick = function() {
-    modal.style.display = "block";
-  }
-
-  // When the user clicks the button, open the modal 
-  btn4.onclick = function() {
-    modal.style.display = "block";
-  }
-  
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+    
+    btn.onclick = function () {
+      modal.style.display = "block";
     }
-  }
+
+    btn2.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    btn3.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    //btn4.onclick = function () {
+      //modal.style.display = "block";
+    //}
+
+    span.onclick = function () {
+      modal.style.display = "none";
+      }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
   </script>
 </body>
 
