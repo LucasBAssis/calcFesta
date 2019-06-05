@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    CalcFestas
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper">
+    <div class="sidebar">
+      <div class="sidebar-wrapper">
+        <div class="logo">
+          <a href="javascript:void(0)" class="simple-text logo-normal">
+            CalcFestas
+          </a>
+        </div>
+        <ul class="nav">
+          <li class="active ">
+            <a href="./dashboard.html">
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p>Planeje sua festa</p>
+            </a>
+          </li>
+          <li>
+            <a href="./explorar.html">
+              <i class="tim-icons icon-planet"></i>
+              <p>Explorar</p>
+            </a>
+          </li>
+          <li>
+            <a href="./user.html">
+              <i class="tim-icons icon-single-02"></i>
+              <p>Minhas configuraçoes</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle d-inline">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="javascript:void(0)">CalcFestas</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+
+              <li class="dropdown nav-item">
+                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <div class="notification d-none d-lg-block d-xl-block"></div>
+                  <i class="tim-icons icon-sound-wave"></i>
+                  <p class="d-lg-none">
+                    Notifications
+                  </p>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
+                  <li class="nav-link">
+                    <a href="#" class="nav-item dropdown-item">Fulano curtiu sua festa</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Fulano curtiu sua festa</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Ciclano deseja voce na festa dele!
+                      Oba!</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Ana quer ajuda. Discuta com ela!</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Fulano curtiu uma festa que voce foi
+                      convidado</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown nav-item">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <div class="photo">
+                    <img src="../assets/img/anime3.png" alt="Profile Photo">
+                  </div>
+                  <b class="caret d-none d-lg-block d-xl-block"></b>
+                  <p class="d-lg-none">
+                    Log out
+                  </p>
+                </a>
+                <ul class="dropdown-menu dropdown-navbar">
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Aumentar minha rede</a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="separator d-lg-none"></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="row">
+          <div class="col-md-6" id="calculadora">
+            <div class="card card-tasks" style="height: 500px!important;">
+              <div class="card-header ">
+                <h4 class="title d-inline">Calculadora</h4>
+                <hr>
+              </div>
+              <div class="card-body ">
+                <div class="table-full-width table-responsive">
+                  <div class="table">
+                    <form>
+                      <div class="row">
+                        <div class="col-md-3 px-md-3">
+                          <div class="form-group">
+                            <label>Convidados</label>
+                            <input type="number" id="convidados" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-3 px-md-3">
+                          <div class="form-group">
+                            <label>Naobebem</label>
+                            <input type="number" id="naoBebem" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-3 px-md-3">
+                          <div class="form-group">
+                            <label>Comiloes</label>
+                            <input type="number" id="comiloes" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-md-3 px-md-3">
+                          <div class="form-group">
+                            <label>Beberroes</label>
+                            <input type="number" id="beberroes" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                      <h6 class="title d-inline">Aperitivos</h6>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="cSalgadinho" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Salgadinho</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="cChips" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Chips</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="cPizza" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Pizza</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="cBatataFrita" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Batata Frita</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="cHotDog" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Hot Dog</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="cHamburguer" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Hamburguer</label>
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                      <h6 class="title d-inline">Doces</h6>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="dBala" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Bala</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="dPirulito" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Pirulito</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="dSorvete" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Sorvete</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="dDocinho" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Docinho</label>
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                      <h6 class="title d-inline">Bebidas sem alcool</h6>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="bAgua" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Agua</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="bRefrigerante" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Refrigerante</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="bSuco" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Suco</label>
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                      <h6 class="title d-inline">Bebidas alcoolicas</h6>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="aCerveja" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Cerveja</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="aVodka" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Vodka</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="aTequila" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Tequila</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="aVinho" value="1">
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                            <label>Vinho</label>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="card-footer">
+                      <button type="submit" class="btn btn-fill btn-primary" id="salvarCalc">Salvar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" id="calculadoraResultado" style="display: none;">
+            <div class="card ">
+              <div class="card-header">
+                <h4 class="card-title"> Resultado</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table tablesorter " id="">
+                    <thead class=" text-primary">
+                      <tr>
+                        <th>
+                          Produto
+                        </th>
+                        <th>
+                          Quantidade
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          Bala
+                        </td>
+                        <td>
+                          1pc
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Cerveja
+                        </td>
+                        <td>
+                          10L
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Bolo
+                        </td>
+                        <td>
+                          10KG
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-fill btn-primary" id="salvarResultado">Salvar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" id="myRede">
+            <div class="card card-tasks" style="height: 500px!important;">
+              <div class="card-header ">
+                <h4 class="title d-inline">Calculadora</h4>
+                <hr>
+              </div>
+              <div class="card-body ">
+                <div class="table-full-width table-responsive">
+                  <div class="table">
+                    <div class="row">
+                      <div class="col-md-1">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="convidado" value="1" checked disabled>
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="photo">
+                          <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <h6>Lucas Piran</h6>
+                        <p>Lorem ipsum</p>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-1">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="convidado" value="1">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="photo">
+                          <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <h6>Lucas Piran</h6>
+                        <p>Lorem ipsum</p>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-1">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="convidado" value="1">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="photo">
+                          <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <h6>Lucas Piran</h6>
+                        <p>Lorem ipsum</p>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-1">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="convidado" value="1">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="photo">
+                          <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <h6>Lucas Piran</h6>
+                        <p>Lorem ipsum</p>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-1">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="convidado" value="1">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="photo">
+                          <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <h6>Lucas Piran</h6>
+                        <p>Lorem ipsum</p>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-1">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="convidado" value="1">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="photo">
+                          <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <h6>Lucas Piran</h6>
+                        <p>Lorem ipsum</p>
+                      </div>
+                    </div>
+                    <hr>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card ">
+              <div class="card-header">
+                <h4 class="card-title"> Calculadora de {{data}}</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table tablesorter " id="">
+                    <thead class=" text-primary">
+                      <tr>
+                        <th>
+                          Produto
+                        </th>
+                        <th>
+                          Quantidade
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          Bala
+                        </td>
+                        <td>
+                          1pc
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Cerveja
+                        </td>
+                        <td>
+                          10L
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Bolo
+                        </td>
+                        <td>
+                          10KG
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-fill btn-primary">Compartilhar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card ">
+              <div class="card-header">
+                <h4 class="card-title"> Calculadora de {{data}}</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table tablesorter " id="">
+                    <thead class=" text-primary">
+                      <tr>
+                        <th>
+                          Produto
+                        </th>
+                        <th>
+                          Quantidade
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          Bala
+                        </td>
+                        <td>
+                          1pc
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Cerveja
+                        </td>
+                        <td>
+                          10L
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Bolo
+                        </td>
+                        <td>
+                          10KG
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-fill btn-primary">Compartilhar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <div class="row">
+                  <div class="col-sm-6 text-left">
+                    <h5 class="card-category">Total de festas dadas</h5>
+                    <h2 class="card-title">Minhas festas</h2>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                      <label class="btn btn-sm btn-primary btn-simple active" id="0">
+                        <input type="radio" name="options" checked>
+                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Festas</span>
+                        <span class="d-block d-sm-none">
+                          <i class="tim-icons icon-single-02"></i>
+                        </span>
+                      </label>
+                      <label class="btn btn-sm btn-primary btn-simple" id="1">
+                        <input type="radio" class="d-none d-sm-none" name="options">
+                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Convidados</span>
+                        <span class="d-block d-sm-none">
+                          <i class="tim-icons icon-gift-2"></i>
+                        </span>
+                      </label>
+                      <label class="btn btn-sm btn-primary btn-simple" id="2">
+                        <input type="radio" class="d-none" name="options">
+                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Preço</span>
+                        <span class="d-block d-sm-none">
+                          <i class="tim-icons icon-tap-02"></i>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="chartBig1"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  </div>
+
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="../assets/js/black-dashboard.min.js?v=1.0.0"></script>
+  <script src="../assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function () {
+      $().ready(function () {
+        $sidebar = $('.sidebar');
+        $navbar = $('.navbar');
+        $main_panel = $('.main-panel');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+        sidebar_mini_active = true;
+        white_color = false;
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+        $('.fixed-plugin a').click(function (event) {
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .background-color span').click(function () {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data', new_color);
+          }
+
+          if ($main_panel.length != 0) {
+            $main_panel.attr('data', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data', new_color);
+          }
+        });
+
+        $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function () {
+          var $btn = $(this);
+
+          if (sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            sidebar_mini_active = false;
+            blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+          } else {
+            $('body').addClass('sidebar-mini');
+            sidebar_mini_active = true;
+            blackDashboard.showSidebarMessage('Sidebar mini activated...');
+          }
+
+          var simulateWindowResize = setInterval(function () {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          setTimeout(function () {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+        });
+
+        $('.switch-change-color input').on("switchChange.bootstrapSwitch", function () {
+          var $btn = $(this);
+
+          if (white_color == true) {
+
+            $('body').addClass('change-background');
+            setTimeout(function () {
+              $('body').removeClass('change-background');
+              $('body').removeClass('white-content');
+            }, 900);
+            white_color = false;
+          } else {
+
+            $('body').addClass('change-background');
+            setTimeout(function () {
+              $('body').removeClass('change-background');
+              $('body').addClass('white-content');
+            }, 900);
+
+            white_color = true;
+          }
+
+
+        });
+
+        $('.light-badge').click(function () {
+          $('body').addClass('white-content');
+        });
+
+        $('.dark-badge').click(function () {
+          $('body').removeClass('white-content');
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      demo.initDashboardPageCharts();
+
+    });
+  </script>
+  <script>
+    $("#calculadora").show();
+    $(document).ready(function () {
+      $('#salvarCalc').click(function () {
+        $("#calculadora").hide();
+        $("#calculadoraResultado").show();
+      });
+    });
+    $(document).ready(function () {
+      $('#salvarResultado').click(function () {
+        $("#calculadora").show();
+        $("#calculadoraResultado").hide();
+      });
+    });
+  </script>
+</body>
+
+</html>
