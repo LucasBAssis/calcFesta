@@ -11,7 +11,6 @@ $('form').submit(function() {
   }
    if (count == 0){
       alert("É necessário selecionar pelo menos um item para o cardápio!");
-      window.location = "calculadora.html";
          return false;
    }
    else {
