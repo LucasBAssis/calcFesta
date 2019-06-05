@@ -134,7 +134,7 @@
                 <div class="table-full-width table-responsive">
                   <div class="table">
                     <form>
-                      <div class="row">
+                      <div class="row" id="listaInfo">
                         <div class="col-md-3 px-md-3">
                           <div class="form-group">
                             <label>Convidados</label>
@@ -160,6 +160,7 @@
                           </div>
                         </div>
                       </div>
+                      <div id="listaComida">
                       <hr>
                       <h6 class="title d-inline">Aperitivos</h6>
                       <br>
@@ -167,7 +168,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="cSalgadinho" value="1">
+                              <input class="form-check-input" type="checkbox" id="cSalgadinho" name="Salgadinho" value="15">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -178,7 +179,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="cChips" value="1">
+                              <input class="form-check-input" type="checkbox" id="cChips" name="Chips" value="15">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -191,18 +192,18 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="cPizza" value="1">
+                              <input class="form-check-input" type="checkbox" id="cPizza" name="Pizza" value="1">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
                             </label>
-                            <label>Pizza</label>
+                            <label>Pizza (pedaço)</label>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="cBatataFrita" value="1">
+                              <input class="form-check-input" type="checkbox" id="cBatataFrita" name="Batata Frita" value="15">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -215,7 +216,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="cHotDog" value="1">
+                              <input class="form-check-input" type="checkbox" id="cHotDog" name="Hot Dog" value="1">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -226,7 +227,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="cHamburguer" value="1">
+                              <input class="form-check-input" type="checkbox" id="cHamburguer" name="Hamburguer" value="1">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -242,7 +243,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="dBala" value="1">
+                              <input class="form-check-input" type="checkbox" id="dBala" name="Bala" value="5">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -253,7 +254,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="dPirulito" value="1">
+                              <input class="form-check-input" type="checkbox" id="dPirulito" name="Pirulito" value="5">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -266,7 +267,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="dSorvete" value="1">
+                              <input class="form-check-input" type="checkbox" id="dSorvete" name="Sorvete" value="1">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -277,7 +278,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="dDocinho" value="1">
+                              <input class="form-check-input" type="checkbox" id="dDocinho" name="Docinho" value="5">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -293,18 +294,18 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="bAgua" value="1">
+                              <input class="form-check-input" type="checkbox" id="bAgua" name="Água" value="400">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
                             </label>
-                            <label>Agua</label>
+                            <label>Água</label>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="bRefrigerante" value="1">
+                              <input class="form-check-input" type="checkbox" id="bRefrigerante" name="Refrigerante" value="400">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -317,7 +318,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="bSuco" value="1">
+                              <input class="form-check-input" type="checkbox" id="bSuco" name="Suco" value="400">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -333,7 +334,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="aCerveja" value="1">
+                              <input class="form-check-input" type="checkbox" id="aCerveja" name="Cerveja" value="200">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -344,7 +345,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="aVodka" value="1">
+                              <input class="form-check-input" type="checkbox" id="aVodka" name="Vodka" value="200">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -357,7 +358,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="aTequila" value="1">
+                              <input class="form-check-input" type="checkbox" id="aTequila" name="Tequila" value="200">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -368,7 +369,7 @@
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="aVinho" value="1">
+                              <input class="form-check-input" type="checkbox" id="aVinho" name="Vinho" value="200">
                               <span class="form-check-sign">
                                 <span class="check"></span>
                               </span>
@@ -376,6 +377,7 @@
                             <label>Vinho</label>
                           </div>
                         </div>
+                      </div>
                       </div>
                     </form>
                     <div class="card-footer">
@@ -389,46 +391,19 @@
           <div class="col-md-6" id="calculadoraResultado" style="display: none;">
             <div class="card ">
               <div class="card-header">
-                <h4 class="card-title"> Resultado</h4>
+                <h4 class="card-title">Resultado</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table tablesorter " id="">
                     <thead class=" text-primary">
                       <tr>
-                        <th>
-                          Produto
-                        </th>
-                        <th>
-                          Quantidade
-                        </th>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          Bala
-                        </td>
-                        <td>
-                          1pc
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Cerveja
-                        </td>
-                        <td>
-                          10L
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Bolo
-                        </td>
-                        <td>
-                          10KG
-                        </td>
-                      </tr>
+                    <tbody id="resultadoCalculadora">
+                      
                     </tbody>
                   </table>
                   <div class="card-footer">
@@ -441,7 +416,7 @@
           <div class="col-md-6" id="myRede">
             <div class="card card-tasks" style="height: 500px!important;">
               <div class="card-header ">
-                <h4 class="title d-inline">Calculadora</h4>
+                <h4 class="title d-inline">Minha rede</h4>
                 <hr>
               </div>
               <div class="card-body ">
@@ -869,9 +844,28 @@
     $(document).ready(function () {
       $('#salvarCalc').click(function () {
         $("#calculadora").hide();
+        var listaMarcados = document.getElementById("listaComida").getElementsByTagName("INPUT")
+        var listaInfo = document.getElementById("listaInfo").getElementsByTagName("INPUT")
+        var saidaResultado = document.getElementById("resultadoCalculadora")
+        var i, HTMLItem, produto, qtd
+        for(i = 0; i < listaMarcados.length; i++){
+          if (listaMarcados[i].type == "checkbox" && listaMarcados[i].checked) {
+            produto = listaMarcados[i].name
+            qtd = listaMarcados[i].value * listaInfo["convidados"].value
+            HTMLItem += `<tr>
+                      <td>${produto}</td>
+                      <td>${qtd}</td>
+                    </tr>`;       
+                  }
+        }
+        $('#resultadoCalculadora').empty();
+        saidaResultado.insertAdjacentHTML("beforeend", HTMLItem);
+
         $("#calculadoraResultado").show();
       });
     });
+
+
     $(document).ready(function () {
       $('#salvarResultado').click(function () {
         $("#calculadora").show();
