@@ -20,9 +20,7 @@
     .carousel {
       height: 60vh;
     }
-
     @media (max-width: 740px) {
-
       html,
       body,
       header,
@@ -30,9 +28,7 @@
         height: 100vh;
       }
     }
-
     @media (min-width: 800px) and (max-width: 850px) {
-
       html,
       body,
       header,
@@ -40,7 +36,6 @@
         height: 100vh;
       }
     }
-
     @media (min-width: 800px) and (max-width: 850px) {
       .navbar:not(.top-nav-collapse) {
         background: #1C2331 !important;
@@ -49,7 +44,7 @@
   </style>
 </head>
 
-<body style="color: white; background-color: #1e1e2e;font-family: 'Poppins', sans-serif;">
+<body onload="init()" style="color: white; background-color: #1e1e2e;font-family: 'Poppins', sans-serif;">
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -81,16 +76,16 @@
                 <strong>CalcFestas</strong>
               </h1>
               <p>
-                <strong>A site ideal para você calcular sua festa</strong>
+                <strong>O site ideal para você calcular sua festa</strong>
               </p>
               <p class="mb-4 d-none d-md-block">
-                <strong>Se cadastre para calcular sua festa, compartilhar seus resultados e ver o resultado de outras
+                <strong>Cadastre-se para calcular sua festa, compartilhar seus resultados e ver o resultado de outras
                   pessoas que também organizaram festas.</strong>
               </p>
               <!--<a href="#" class="btn btn-outline-white btn-lg">Faça Login
               </a>-->
               <button type="button" id="myBtn" class="btn btn-outline-white btn-lg btnLogin">
-                Registra-se ou faça login</button>
+                Registre-se ou faça login</button>
 
             </div>
           </div>
@@ -108,14 +103,14 @@
                 <strong>CalcFestas</strong>
               </h1>
               <p>
-                <strong>A site ideal para você calcular sua festa</strong>
+                <strong>O site ideal para você calcular sua festa</strong>
               </p>
               <p class="mb-4 d-none d-md-block">
-                <strong>Se cadastre para calcular sua festa, compartilhar seus resultados e ver o resultado de outras
+                <strong>Cadastre-se para calcular sua festa, compartilhar seus resultados e ver o resultado de outras
                   pessoas que também organizaram festas.</strong>
               </p>
               <button type="button" id="myBtn2" class="btn btn-outline-white btn-lg btnLogin">
-                Registra-se ou faça login</button>
+                Registre-se ou faça login</button>
             </div>
           </div>
         </div>
@@ -132,14 +127,14 @@
                 <strong>CalcFestas</strong>
               </h1>
               <p>
-                <strong>A site ideal para você calcular sua festa</strong>
+                <strong>O site ideal para você calcular sua festa</strong>
               </p>
               <p class="mb-4 d-none d-md-block">
-                <strong>Se cadastre para calcular sua festa, compartilhar seus resultados e ver o resultado de outras
+                <strong>Cadastre-se para calcular sua festa, compartilhar seus resultados e ver o resultado de outras
                   pessoas que também organizaram festas.</strong>
               </p>
               <button type="button" id="myBtn3" class="btn btn-outline-white btn-lg btnLogin">
-                Registra-se ou faça login</button>
+                Registre-se ou faça login</button>
             </div>
           </div>
         </div>
@@ -158,6 +153,7 @@
   </div>
 
   <!-- Modal -->
+  <form>
   <div class="modal" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
     style="margin-top:75px">
     <div class="modal-dialog" role="document">
@@ -170,31 +166,30 @@
         <div class="modal-body" id="registre">
           <div class="form-group">
             <label class="control-label" style="color: black;">Usuário:</label><br>
-            <input name="username" type="text" class="form-control" placeholder="Crie um nome de usuario">
+            <input name="username" type="text" class="form-control" placeholder="Crie um nome de usuário" id="username" required>
           </div>
           <div class="form-group">
             <label class="control-label" style="color: black;">Email:</label><br>
-            <input name="email" type="email" class="form-control" placeholder="Insira seu melhor e-mail">
+            <input name="email" type="email" class="form-control" placeholder="Insira seu melhor e-mail" id="email" required>
           </div>
           <div class="form-group">
             <label class="control-label" style="color: black;">Senha:</label><br>
-            <input name="password" type="password" class="form-control" placeholder="Senha">
+            <input name="password" type="password" class="form-control" placeholder="Senha" id="password" required>
           </div>
           <div class="form-group">
             <label class="control-label" style="color: black;">Sua data de nascimento:</label><br>
-            <input name="data" type="date" class="form-control" placeholder="Senha">
-          </div>
+            <input name="data" type="date" class="form-control" placeholder="Data de nascimento" id="data_nascimento" required>
+          </div>modalLogin
           <div class="modal-footer">
             <button class="bntLoginModal" id="modalLogin"
-              style="font-size: 10px;background-color: white;border: none;">Ja tem uma conta? Faça login</button>
-            <button type="button" class="btn btn-success" style="background-color: #de4ecc!important"
-              onclick="window.location.href = './examples/dashboard.html'">Registra-se</button>
+              style="font-size: 10px;background-color: white;border: none;">Já tem uma conta? Faça login</button>
+            <button type="submit" class="btn btn-success" style="background-color: #de4ecc!important" id="btn_registra">Registre-se</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+</form>
 
   <!-- Modal -->
   <div class="modal" id="myModalLogin" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
@@ -209,15 +204,14 @@
         <div class="modal-body" id="login">
           <div class="form-group">
             <label class="control-label" style="color: black;">Usuário:</label><br>
-            <input name="username" type="text" class="form-control" placeholder="Nome de usuario">
+            <input name="username" type="text" class="form-control" placeholder="Nome de usuario" id="usuario_login">
           </div>
           <div class="form-group">
             <label class="control-label" style="color: black;">Senha:</label><br>
-            <input name="password" type="password" class="form-control" placeholder="Senha">
+            <input name="password" type="password" class="form-control" placeholder="Senha" id="senha_login">
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success" style="background-color: #de4ecc!important"
-              onclick="window.location.href = './examples/dashboard.html'">Login</button>
+            <button type="button" class="btn btn-success" style="background-color: #de4ecc!important" id="btn_login">Login</button>
           </div>
         </div>
       </div>
@@ -245,7 +239,6 @@
                   <div style="height:15px"></div>
               </div>
             </div>
-
             <div class="row">
               <div class="col-2">
                 <i class="fas fa-check-circle fa-2x indigo-Text" style="color:#de4ecc!important""></i>
@@ -271,7 +264,6 @@
                   <div style="height:15px"></div>
               </div>
             </div>
-
             <div class="row">
               <div class="col-2">
                 <i class="fas fa-check-circle fa-2x indigo-Text" style="color:#de4ecc!important""></i>
@@ -303,7 +295,6 @@
                   <div style="height:15px"></div>
               </div>
             </div>
-
             <div class="row">
               <div class="col-2">
                 <i class="fas fa-check-circle fa-2x indigo-Text" style="color:#de4ecc!important""></i>
@@ -329,7 +320,6 @@
                   <div style="height:15px"></div>
               </div>
             </div>
-
             <div class="row">
               <div class="col-2">
                 <i class="fas fa-check-circle fa-2x indigo-Text" style="color:#de4ecc!important""></i>
@@ -385,7 +375,7 @@
             </div>
           </div>
           <div class="col-lg-6 col-md-12">
-            <p class="h5 text-center mb-4">Assista esse videozinho sobre como calcular sua festa ;)</p>
+            <p class="h5 text-center mb-4">Assista a esse videozinho sobre como calcular sua festa ;)</p>
             <div class="embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xErmvtq3ISc"
                 allowfullscreen></iframe>
@@ -397,7 +387,7 @@
       <hr class="mb-5 hr">
 
       <section>
-        <h2 class="my-5 h3 text-center">Porquê usar a CalcFestas:</h2>
+        <h2 class="my-5 h3 text-center">Por que usar o CalcFestas:</h2>
 
         <div class="row features-small mt-5 wow fadeIn">
           <div class="col-xl-3 col-lg-6">
@@ -414,7 +404,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-xl-3 col-lg-6">
             <div class="row">
               <div class="col-2">
@@ -444,7 +433,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-xl-3 col-lg-6">
             <div class="row">
               <div class="col-2">
@@ -477,7 +465,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-xl-3 col-lg-6">
             <div class="row">
               <div class="col-2">
@@ -506,7 +493,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-xl-3 col-lg-6">
             <div class="row">
               <div class="col-2">
@@ -530,13 +516,14 @@
   <footer class="page-footer text-center font-small mt-4 wow fadeIn">
     <div class="footer-copyright py-3">
       © 2019 Copyright:
-      <a href="#"> DayDev </a>
+      <a href="#"> CalcFestas </a>
     </div>
   </footer>
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/popper.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script src="js/fakedb.js"></script>
   <script type="text/javascript">
     new WOW().init();
   </script>
@@ -548,47 +535,62 @@
     var btn3 = document.getElementById("myBtn3");
     var btn4 = document.getElementById("myBtn4");
     var span = document.getElementsByClassName("close")[0];
-
-
     btn.onclick = function () {
       modal.style.display = "block";
     }
-
     btn2.onclick = function () {
       modal.style.display = "block";
     }
-
     btn3.onclick = function () {
       modal.style.display = "block";
     }
-
     //btn4.onclick = function () {
     //modal.style.display = "block";
     //}
-
     span.onclick = function () {
       modal.style.display = "none";
     }
-
     window.onclick = function (event) {
       if (event.target == modal) {
         modal.style.display = "none";
       }
     }
-
     $(document).ready(function () {
       $('#modalLogin').click(function () {
         $("#myModalLogin").show();
         $("#myModal").hide();
       });
     });
-
     $(document).ready(function () {
       $('#closeModal').click(function () {
         $("#myModalLogin").hide();
       });
     });
-
+    function init() {
+            // Adiciona funções para tratar os eventos 
+            $("#btn_login").click(function () {
+                // Verfica se o formulário está preenchido corretamente
+                let campoUsuario = $("#usuario_login").val();
+                let campoSenha = $("#senha_login").val();
+                let usuario = { usuario: campoUsuario, senha: campoSenha };
+                
+                let verifica = procuraUsuario(usuario);
+                if (verifica == 1) //Vai para a tela
+                  window.location = "/examples/dashboard.html";
+                else if (verifica == 2) 
+                  alert("SENHA INVÁLIDA");
+                else
+                  alert("USUÁRIO E SENHA INVÁLIDOS");
+            });
+            $("#btn_registra").click(function () {
+            let campoUsuario = $("#username").val();
+            let campoSenha = $("#password").val();
+            let campoDataNascimento = $("#data_nascimento").val();
+            let campoEmail = $("#email").val();
+            let usuario = { usuario: campoUsuario, senha: campoSenha, data_nascimento: campoDataNascimento, email: campoEmail};
+            insertUsuario(usuario);
+          });
+        }
   </script>
 </body>
 
