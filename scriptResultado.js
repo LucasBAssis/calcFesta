@@ -44,7 +44,8 @@ $(document).ready(function () {
                                 <div class='col-md-4'>
                                     <p>${quantidade}${unidade}</p>
                                 </div>    
-                            </div>`;
+                            </div>
+							<hr>`;
             }
         }
 
