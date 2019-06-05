@@ -153,7 +153,7 @@
   </div>
 
   <!-- Modal -->
-  <form>
+
   <div class="modal" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
     style="margin-top:75px">
     <div class="modal-dialog" role="document">
@@ -189,7 +189,7 @@
       </div>
     </div>
   </div>
-</form>
+
 
   <!-- Modal -->
   <div class="modal" id="myModalLogin" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
@@ -588,7 +588,12 @@
             let campoDataNascimento = $("#data_nascimento").val();
             let campoEmail = $("#email").val();
             let usuario = { usuario: campoUsuario, senha: campoSenha, data_nascimento: campoDataNascimento, email: campoEmail};
-            insertUsuario(usuario);
+            let verifica = procuraUsuario(usuario);
+            if (verifica==1 || verifica==2)
+              alert("Usuário já cadastrado!");
+            else {
+              insertUsuario(usuario);
+            window.location = "index.html";}
           });
         }
   </script>
