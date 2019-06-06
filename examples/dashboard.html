@@ -138,7 +138,7 @@
                         <div class="col-md-3 px-md-3">
                           <div class="form-group">
                             <label>Convidados</label>
-                            <input type="number" id="convidados" class="form-control">
+                            <input type="number" id="convidados" class="form-control convidadosInfo">
                           </div>
                         </div>
                         <div class="col-md-3 px-md-3">
@@ -422,18 +422,27 @@
           </div>
           <div class="col-md-6" id="myRede">
             <div class="card card-tasks" style="height: 500px!important;">
-              <div class="card-header ">
+              <div class="card-header">
                 <h4 class="title d-inline">Minha rede</h4>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <p id="pHabilitar">Habilitar lista</p>
+                    <input class="form-check-input" type="checkbox" id="inpHabilitarLista" value="1">
+                    <span class="form-check-sign">
+                      <span class="check"></span>
+                    </span>
+                  </label>
+                </div>
                 <hr>
               </div>
-              <div class="card-body ">
+              <div class="card-body chbListaConvidados">
                 <div class="table-full-width table-responsive">
                   <div class="table">
                     <div class="row">
                       <div class="col-md-1">
                         <div class="form-check">
                           <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="convidado" value="1" checked disabled>
+                          <input class="form-check-input habilitarInput" id="inputRedesChecar" type="checkbox" id="convidado" value="1" disabled>
                             <span class="form-check-sign">
                               <span class="check"></span>
                             </span>
@@ -450,117 +459,29 @@
                         <p>Lorem ipsum</p>
                       </div>
                     </div>
+                    
                     <hr>
                     <div class="row">
-                      <div class="col-md-1">
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="convidado" value="1">
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
+                        <div class="col-md-1">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input habilitarInput" id="inputRedesChecar" type="checkbox" id="convidado" value="1" disabled>
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="photo">
+                            <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
+                          </div>
+                        </div>
+                        <div class="col-md-5">
+                          <h6>Lucas Piran</h6>
+                          <p>Lorem ipsum</p>
                         </div>
                       </div>
-                      <div class="col-md-3">
-                        <div class="photo">
-                          <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
-                        </div>
-                      </div>
-                      <div class="col-md-5">
-                        <h6>Lucas Piran</h6>
-                        <p>Lorem ipsum</p>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-md-1">
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="convidado" value="1">
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="photo">
-                          <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
-                        </div>
-                      </div>
-                      <div class="col-md-5">
-                        <h6>Lucas Piran</h6>
-                        <p>Lorem ipsum</p>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-md-1">
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="convidado" value="1">
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="photo">
-                          <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
-                        </div>
-                      </div>
-                      <div class="col-md-5">
-                        <h6>Lucas Piran</h6>
-                        <p>Lorem ipsum</p>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-md-1">
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="convidado" value="1">
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="photo">
-                          <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
-                        </div>
-                      </div>
-                      <div class="col-md-5">
-                        <h6>Lucas Piran</h6>
-                        <p>Lorem ipsum</p>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                      <div class="col-md-1">
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="convidado" value="1">
-                            <span class="form-check-sign">
-                              <span class="check"></span>
-                            </span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="photo">
-                          <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
-                        </div>
-                      </div>
-                      <div class="col-md-5">
-                        <h6>Lucas Piran</h6>
-                        <p>Lorem ipsum</p>
-                      </div>
-                    </div>
-                    <hr>
                   </div>
                 </div>
               </div>
@@ -842,17 +763,19 @@
   </script>
   <script>
     $(document).ready(function () {
-      demo.initDashboardPageCharts();
+      demo.initDashboardPageCharts()
 
     });
   </script>
   <script>
+    var listaMarcados = document.getElementById("listaComida").getElementsByTagName("INPUT")
+    var listaInfo = document.getElementById("listaInfo").getElementsByTagName("INPUT")
+    var contaInput = document.getElementById("inputRedesChecar")
+    var cont = 0
     $("#calculadora").show();
     $(document).ready(function () {
       $('#salvarCalc').click(function () {
-        $("#calculadora").hide();
-        var listaMarcados = document.getElementById("listaComida").getElementsByTagName("INPUT")
-        var listaInfo = document.getElementById("listaInfo").getElementsByTagName("INPUT")
+        $("#calculadora").hide()
         var saidaResultado = document.getElementById("resultadoCalculadora")
         var i, HTMLItem, produto, qtd
         for (i = 0; i < listaMarcados.length; i++) {
@@ -865,20 +788,45 @@
                     </tr>`;
           }
         }
-        $('#resultadoCalculadora').empty();
-        saidaResultado.insertAdjacentHTML("beforeend", HTMLItem);
-
-        $("#calculadoraResultado").show();
+        $('#resultadoCalculadora').empty()
+        saidaResultado.insertAdjacentHTML("beforeend", HTMLItem)
+        $("#calculadoraResultado").show()
       });
     });
 
-
+    $("#inpHabilitarLista").click(function() {
+      var habilitar = document.getElementById("inpHabilitarLista")
+      if(habilitar.checked){
+        cont = 0
+        $('#pHabilitar').empty();
+        document.getElementById("pHabilitar").insertAdjacentHTML("beforeend", "Desabilitar lista")
+        $(".habilitarInput").prop('disabled', false);
+        $(listaInfo).empty()
+        $(listaInfo).prop('disabled', true);
+        $(listaInfo["convidados"]).val($('#pHabilitar:checked').length) 
+      }else{
+        $('#pHabilitar').empty();
+        document.getElementById("pHabilitar").insertAdjacentHTML("beforeend", "Habilitar lista")
+        $(".habilitarInput").prop('checked', false);
+        $(".habilitarInput").prop('disabled', true); 
+        $(listaInfo).prop('disabled', false);
+      }
+    })
+    $(".habilitarInput").click(function() {
+      if(contaInput.checked){
+        cont = cont+1
+      }else{
+        cont = cont-1
+      }
+      $(listaInfo["convidados"]).val(cont)
+      $(".convidadosInfo").css("color", "white")
+    })
     $(document).ready(function () {
       $('#salvarResultado').click(function () {
-        $("#calculadora").show();
-        $("#calculadoraResultado").hide();
-      });
-    });
+        $("#calculadora").show()
+        $("#calculadoraResultado").hide()
+      })
+    })
   </script>
 </body>
 
