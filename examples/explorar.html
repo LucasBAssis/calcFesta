@@ -19,11 +19,15 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Adicione um comentario">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <i class="tim-icons icon-simple-remove"></i>
-              </button>
+				<div id="comentarios"></div>
             </div>
+			<div class="modal-body">
+				<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Adicione um comentario">
+				<button type="submit" class="btn btn-fill btn-primary" style="background-color: #de4ecc!important" id="btnComentar">Comentar</button>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="tim-icons icon-simple-remove"></i>
+				</button>
+			</div>
           </div>
         </div>
       </div>
@@ -480,6 +484,14 @@
 
         });
     </script>
+	<script>
+		var comentarios = '';
+		$('#btnComentar').click(function () {
+			var text = $('#inlineFormInputGroup').val();
+			comentarios += `<p class="form-control">${text}</p>`
+			$('#comentarios').html(comentarios);
+		})
+	</script>
 </body>
 
 </html>
