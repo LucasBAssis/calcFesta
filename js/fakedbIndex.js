@@ -3,31 +3,14 @@ var dbfake = {
     "data": [
         {
             "id": 1,
-            "usuario": "Carolina Alves",
-            "email": "carol.alves@pucminas.sga.br",
-            "senha": "carol123",
-            "data_nascimento": "05/06/1999"
+            "usuario": "dayanne",
+            "senha": "dayanne123"
         },
+        
         {
             "id": 2,
-            "usuario": "Dayanne Beatriz",
-            "email": "dayanne.beatriz@sga.pucminas.br",
-            "senha": "dayanne123",
-            "data_nascimento": "02/11/1999"
-        },
-        {
-            "id": 3,
-            "usuario": "Gabriel de Moura",
-            "email": "gabriel.moura@sga.pucminas.br",
-            "senha": "gabriel123",
-            "data_nascimento": "02/11/1999"
-        },
-        {
-            "id": 4,
-            "usuario": "Pedro Borges",
-            "email": "pedro.borges@sga.pucminas.br",
-            "senha": "pedro123",
-            "data_nascimento": "02/11/1999"
+            "usuario": "pedro",
+            "senha": "pedro123"
         }
     ]
 }
@@ -50,9 +33,7 @@ function insertUsuario(usuario) {
     let novoUsuario = {
         "id": novoId,
         "usuario": usuario.usuario,
-        "email": usuario.email,
-        "senha": usuario.senha,
-        "data_nascimento": usuario.data_nascimento
+        "senha": usuario.senha
     };
 
     // Insere o novo objeto no array
@@ -69,9 +50,7 @@ function updateUsuario(id, usuario) {
 
     // Altera os dados do objeto no array
     db.data[index].usuario = usuario.usuario,
-    db.data[index].email = usuario.email,
     db.data[index].senha = usuario.senha,
-    db.data[index].data_nascimento = usuario.data_nascimento
 
     displayMessage("Usuário alterado com sucesso");
 

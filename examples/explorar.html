@@ -17,16 +17,16 @@
 <body class="">
     <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-				<div id="comentarios"></div>
-            </div>
+          <div class="modal-content">    
 			<div class="modal-body">
-				<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Adicione um comentario">
-				<button type="submit" class="btn btn-fill btn-primary" style="background-color: #de4ecc!important" id="btnComentar">Comentar</button>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="tim-icons icon-simple-remove"></i>
-				</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="tim-icons icon-simple-remove"></i>
+                        </button>
+				<input type="text" class="form-control" id="inlineFormInputGroup" style="box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);" placeholder="Adicione um comentario">
+				<button type="submit" class="btn btn-fill btn-primary" style="background-color: #de4ecc!important; " id="btnComentar">Comentar</button>
+                <div id="comentarios">
+                    <hr>
+                </div>
 			</div>
           </div>
         </div>
@@ -49,13 +49,7 @@
                     <li class="active">
                         <a href="./explorar.html">
                             <i class="tim-icons icon-planet"></i>
-                            <p>Explorar</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./user.html">
-                            <i class="tim-icons icon-single-02"></i>
-                            <p>Minhas configuraçoes</p>
+                            <p>Calculadoras</p>
                         </a>
                     </li>
                 </ul>
@@ -64,82 +58,49 @@
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
-                <div class="container-fluid">
-                    <div class="navbar-wrapper">
+                    <div class="container-fluid">
+                      <div class="navbar-wrapper">
                         <div class="navbar-toggle d-inline">
-                            <button type="button" class="navbar-toggler">
-                                <span class="navbar-toggler-bar bar1"></span>
-                                <span class="navbar-toggler-bar bar2"></span>
-                                <span class="navbar-toggler-bar bar3"></span>
-                            </button>
+                          <button type="button" class="navbar-toggler">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                          </button>
                         </div>
                         <a class="navbar-brand" href="javascript:void(0)">CalcFestas</a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                      </div>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navigation">
+                      </button>
+                      <div class="collapse navbar-collapse" id="navigation">
                         <ul class="navbar-nav ml-auto">
-
-                            <li class="dropdown nav-item">
-                                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                    <div class="notification d-none d-lg-block d-xl-block"></div>
-                                    <i class="tim-icons icon-sound-wave"></i>
-                                    <p class="d-lg-none">
-                                        Notifications
-                                    </p>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
-                                    <li class="nav-link">
-                                        <a href="#" class="nav-item dropdown-item">Fulano curtiu sua festa</a>
-                                    </li>
-                                    <li class="nav-link">
-                                        <a href="javascript:void(0)" class="nav-item dropdown-item">Fulano curtiu sua
-                                            festa</a>
-                                    </li>
-                                    <li class="nav-link">
-                                        <a href="javascript:void(0)" class="nav-item dropdown-item">Ciclano deseja voce
-                                            na festa dele! Oba!</a>
-                                    </li>
-                                    <li class="nav-link">
-                                        <a href="javascript:void(0)" class="nav-item dropdown-item">Ana quer ajuda.
-                                            Discuta com ela!</a>
-                                    </li>
-                                    <li class="nav-link">
-                                        <a href="javascript:void(0)" class="nav-item dropdown-item">Fulano curtiu uma
-                                            festa que voce foi convidado</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown nav-item">
-                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                    <div class="photo">
-                                        <img src="../assets/img/anime3.png" alt="Profile Photo">
-                                    </div>
-                                    <b class="caret d-none d-lg-block d-xl-block"></b>
-                                    <p class="d-lg-none">
-                                        Log out
-                                    </p>
-                                </a>
-                                <ul class="dropdown-menu dropdown-navbar">
-                                    <li class="nav-link">
-                                        <a href="javascript:void(0)" class="nav-item dropdown-item">Aumentar minha
-                                            rede</a>
-                                    </li>
-                                    <li class="dropdown-divider"></li>
-                                    <li class="nav-link">
-                                        <a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="separator d-lg-none"></li>
+            
+                          <li class="dropdown nav-item">
+                            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                              <div class="photo">
+                                <img src="../assets/img/anime3.png" alt="Profile Photo">
+                              </div>
+                              <b class="caret d-none d-lg-block d-xl-block"></b>
+                              <p class="d-lg-none">
+                                Log out
+                              </p>
+                            </a>
+                            <ul class="dropdown-menu dropdown-navbar">
+                              
+                              <li class="dropdown-divider"></li>
+                              <li class="nav-link">
+                                <a href="../index.html" class="nav-item dropdown-item">Log out</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="separator d-lg-none"></li>
                         </ul>
+                      </div>
                     </div>
-                </div>
-            </nav>
+                  </nav>
             <!-- End Navbar -->
 
             <div class="content">
@@ -488,7 +449,7 @@
 		var comentarios = '';
 		$('#btnComentar').click(function () {
 			var text = $('#inlineFormInputGroup').val();
-			comentarios += `<p class="form-control">${text}</p>`
+			comentarios += `<p class="form-control">${text}</p><hr>`
 			$('#comentarios').html(comentarios);
 		})
 	</script>
