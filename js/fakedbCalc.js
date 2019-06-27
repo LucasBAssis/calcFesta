@@ -2,8 +2,8 @@ var dbCalcCalc = {
     "data": [
         {
             "id": 1,
-            "produto": ["Pizza", "Salgadinho"],
-            "qtd": [1,2]
+            "produto": ["Batata Frita", "Salgadinho", "Hamburguer","Bala", "Sorvete", "Refrigerante","Suco"],
+            "qtd": [590,30,12,100,5,10,20]
         }
     ]
 }
