@@ -21,7 +21,7 @@
 </head>
 
 <body class="">
-    <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+    <div class="modal modal-search fade" id="comentarioModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true" style="display: none">
         <div class="modal-dialog" role="document">
           <div class="modal-content">    
 			<div class="modal-body">
@@ -127,6 +127,14 @@
     <script src="../js/fakedbCalc.js"></script>
     <script>
 
+    // var modal = document.getElementById("comentarioModal");
+    var btn = document.getElementById("comentarCalc");
+        $('#comentarCalc').click(function () {
+            $("#comentarioModal").show()
+        })
+        
+
+
         var saidaResultado = document.getElementById("tdsCalcs")
         var i, j, HTMLItem = '', produto, qtd, count, marcador = '', marcadorFinal = ''
             
@@ -167,7 +175,11 @@
                                                         }
                                                     }
                                         HTMLItem += `</tbody>
+                                        
                                                 </table>
+                                                <div class="card-footer">
+                                                <button type="submit" class="btn btn-fill btn-primary" id="comentarCalc">Comentar</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
