@@ -13,35 +13,50 @@
     <link href="../assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
     <link href="../assets/demo/demo.css" rel="stylesheet" />
     <style>
-        .display{
-        display: inline-block!important;
-        
-    }
+        .display {
+            display: inline-block !important;
+
+        }
     </style>
 </head>
 
 <body class="">
-        <div class="modal" id="comentarioModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-        style="margin-top:75p; display: none">
+    <div class="modal" id="comentarioModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true" style="margin-top:75p; display: none">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title" style="color: black;">Comentarios</h4>
-              <button id="closeModal" type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="functionClose()">
-                <span aria-hidden="true" onclick="functionClose()">&times;</span></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: black;">Comentarios</h4>
+                    <button id="closeModal" type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="functionClose()">
+                        <span aria-hidden="true" onclick="functionClose()">&times;</span></button>
+                </div>
+                <div class="modal-body" id="login">
+                    <div>
+                        <input hidden type="text" value="" id="inputId">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" style="color: #000;">Digite o seu nome:</label><br>
+                        <input name="username" style="color: black; border-color: #f1f1f1;" type="text"
+                            class="form-control" placeholder="Qual o seu nome?" id="inputNome"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" style="color: #000;">Digite o seu comentario aqui:</label><br>
+                        <input name="username" style="color: black; border-color: #f1f1f1;" type="text"
+                            class="form-control" placeholder="O que achou da calc? Comente :)" id="inputComentario"
+                            required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" style="background-color: #de4ecc!important"
+                            id="btnComentar">Comentar</button>
+                    </div>
+                    <div id="comentarios">
+                    </div>
+                </div>
             </div>
-            <div class="modal-body" id="login">
-              <div class="form-group">
-                <label class="control-label" style="color: #000;">Digite o seu comentario  aqui:</label><br>
-                <input name="username" style="color: black; border-color: #f1f1f1;" type="text" class="form-control" placeholder="O que achou da calc? Comente :)" id="usuario_login" required>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn" style="background-color: #de4ecc!important" id="btn_login">Comentar</button>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
     <div class="wrapper">
         <div class="sidebar">
@@ -70,53 +85,53 @@
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
-                    <div class="container-fluid">
-                      <div class="navbar-wrapper">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
                         <div class="navbar-toggle d-inline">
-                          <button type="button" class="navbar-toggler">
-                            <span class="navbar-toggler-bar bar1"></span>
-                            <span class="navbar-toggler-bar bar2"></span>
-                            <span class="navbar-toggler-bar bar3"></span>
-                          </button>
+                            <button type="button" class="navbar-toggler">
+                                <span class="navbar-toggler-bar bar1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </button>
                         </div>
                         <a class="navbar-brand" href="javascript:void(0)">CalcFestas</a>
-                      </div>
-                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navigation">
+                    </button>
+                    <div class="collapse navbar-collapse" id="navigation">
                         <ul class="navbar-nav ml-auto">
-            
-                          <li class="dropdown nav-item">
-                            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                              <div class="photo">
-                                <img src="../assets/img/anime3.png" alt="Profile Photo">
-                              </div>
-                              <b class="caret d-none d-lg-block d-xl-block"></b>
-                              <p class="d-lg-none">
-                                Log out
-                              </p>
-                            </a>
-                            <ul class="dropdown-menu dropdown-navbar">
-                              
-                              <li class="dropdown-divider"></li>
-                              <li class="nav-link">
-                                <a href="../index.html" class="nav-item dropdown-item">Log out</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="separator d-lg-none"></li>
+
+                            <li class="dropdown nav-item">
+                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <div class="photo">
+                                        <img src="../assets/img/anime3.png" alt="Profile Photo">
+                                    </div>
+                                    <b class="caret d-none d-lg-block d-xl-block"></b>
+                                    <p class="d-lg-none">
+                                        Log out
+                                    </p>
+                                </a>
+                                <ul class="dropdown-menu dropdown-navbar">
+
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-link">
+                                        <a href="../index.html" class="nav-item dropdown-item">Log out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="separator d-lg-none"></li>
                         </ul>
-                      </div>
                     </div>
+                </div>
             </nav>
             <!-- End Navbar -->
 
             <div class="content" id="tdsCalcs">
-                
+
             </div>
             <footer class="footer"></footer>
         </div>
@@ -133,17 +148,17 @@
     <script src="../js/fakedbCalc.js"></script>
     <script>
 
-    // var modal = document.getElementById("comentarioModal");
-    function functionClose(){
-        $("#comentarioModal").hide()
-    }
+        // var modal = document.getElementById("comentarioModal");
+        function functionClose() {
+            $("#comentarioModal").hide()
+        }
         var saidaResultado = document.getElementById("tdsCalcs")
         var i, j, HTMLItem = '', produto, qtd, count, marcador = '', marcadorFinal = ''
-            
-        for (j = 0; j < dbCalc.data.length; j++) { 
+
+        for (j = 0; j < dbCalc.data.length; j++) {
             var marcador = '', marcadorFinal = ''
-            if(dbCalc.data[j] != null){
-               // if(j==0 || j%2==0){marcador="<div class='row'>"}else{marcadorFinal="</div>"}
+            if (dbCalc.data[j] != null) {
+                // if(j==0 || j%2==0){marcador="<div class='row'>"}else{marcadorFinal="</div>"}
                 HTMLItem = `${marcador}
                         <div class="col-xs-12 col-md-5 display">
                                     <div class="card ">
@@ -164,9 +179,9 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>`;
-                                                        for (i = 0; i < dbCalc.data[j].produto.length; i++) { 
-                                                        if(dbCalc.data[j].produto[i] != null){
-                                                            HTMLItem += `<tr> 
+                for (i = 0; i < dbCalc.data[j].produto.length; i++) {
+                    if (dbCalc.data[j].produto[i] != null) {
+                        HTMLItem += `<tr> 
                                                             <td>
                                                                 ${dbCalc.data[j].produto[i]}
                                                             </td>
@@ -174,13 +189,13 @@
                                                                ${dbCalc.data[j].qtd[i]}
                                                             </td>
                                                         </tr>`;
-                                                        }
-                                                    }
-                                        HTMLItem += `</tbody>
+                    }
+                }
+                HTMLItem += `</tbody>
                                         
                                                 </table>
                                                 <div class="card-footer">
-                                                <button type="submit" class="btn btn-fill btn-primary" onclick="myFunction()" id="comentarCalc">Comentar</button>
+                                                <button type="submit" class="btn btn-fill btn-primary" onclick="myFunction(${dbCalc.data[j].id})" id="comentarCalc">Comentar</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -192,9 +207,11 @@
             }
             // saidaResultado.innerHTML = HTMLItem
         }
-        function myFunction() {
-        var btn = document.getElementById("comentarCalc");
+        function myFunction(id) {
+            var btn = document.getElementById("comentarCalc");
             $("#comentarioModal").show()
+            $("#inputId").val(id);
+            exibeComentarios(id);
         }
     </script>
     <script>
@@ -312,15 +329,17 @@
 
         });
     </script>
-	<script>
-		var comentarios = '';
-		$('#btnComentar').click(function (id) {
-			/*var text = $('#inlineFormInputGroup').val();
-			comentarios += `<p class="form-control">${text}</p><hr>`
-			$('#comentarios').html(comentarios);*/
-
-            let campoId = id;
-
+    <script>
+        var comentarios = '';
+        $('#btnComentar').click(function () {
+            /*var id = $('#inputId').val();
+            var nome = $('#inputNome').val();
+            var text = $('#inputComentario').val();
+            comentarios += `<p class="form-control">${nome}: ${text}</p><hr>`
+            $('#comentarios').html(comentarios);
+            */
+            
+            let campoId = $('#inputId').val();
             let campoNome = $("#inputNome").val();
             let campoComentario = $("#inputComentario").val();
 
@@ -329,23 +348,23 @@
             insertComentario(parseInt(campoId), coment);
 
             exibeComentarios(campoId);
+            
 
-		})
+        })
 
         function exibeComentarios(campoId) {
             var HtmlItemComent = '';
-            for(var i = 0; i < dbCalc.data[campoId].comentarios.length; i++) {
-                let comentDados = dbCalc.data[campoId].comentarios[i];
+            for (var i = 0; i < dbCalc.data[campoId - 1].comentarios.length; i++) {
+                let comentDados = dbCalc.data[campoId - 1].comentarios[i];
                 HtmlItemComent += `
                 <hr>
-                <h6>${ comentDados.nome }</h6>
-                <p style="font-size: 15px; margin-top: 10px">${ comentDados.comentario }</p>
+                <p><strong>${comentDados.nome}:</strong> ${comentDados.comentario}</p>
                 `
             }
 
             document.getElementById('comentarios').innerHTML = HtmlItemComent;
         }
-	</script>
+    </script>
 </body>
 
 </html>
