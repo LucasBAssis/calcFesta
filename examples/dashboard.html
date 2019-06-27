@@ -556,7 +556,6 @@
     var HTMLItemCtt = ''
     var listaMarcados = document.getElementById("listaComida").getElementsByTagName("INPUT")
     var listaInfo = document.getElementById("listaInfo").getElementsByTagName("INPUT")
-    var contaInput = document.getElementById("inputRedesChecar")
     var cont = 0
     var calcProd 
     var calcQtd 
@@ -567,7 +566,14 @@
     $("#calculadora").show();
     $('#salvarCalc').click(function () {
       let convidados = document.getElementById("inpConvidados").value
-      if(convidados.trim() != ''){
+      //let checkLista = document.getElementById("inpHabilitarLista").value;
+
+      if(cont != 0) {
+        convidados = cont;
+      }
+
+      if(convidados != '' || convidados != 0) {
+        console.log('entrou no if');
         $("#calculadora").hide()
         var saidaResultado = document.getElementById("resultadoCalculadora")
         var i, HTMLItem = '', produto, qtd
@@ -576,7 +582,7 @@
           if (listaMarcados[i].type == "checkbox" && listaMarcados[i].checked) {
             produto = listaMarcados[i].name
             calcProd[i] = produto
-            qtd = listaMarcados[i].value * listaInfo["inpConvidados"].value
+            qtd = listaMarcados[i].value * convidados
             calcQtd[i] = qtd
 
             HTMLItem += `<tr>
@@ -623,7 +629,7 @@
       let Ctt = { nome: campoNome, desc: campoDesc };
 
       insertCtt(Ctt);
-      exibeCtt();
+      document.location.reload(true);
       $("#myModalCtt").hide();
     })
     $("#inpHabilitarLista").click(function() {
@@ -645,43 +651,51 @@
       }
     })
     $(".habilitarInput").click(function() {
+      console.log("clicou no checkbox");
+      var contaInput = document.getElementById("inputRedesChecar");
       if(contaInput.checked){
+        console.log('entrou no if');
         cont = cont+1
+        console.log(cont);
       }else{
+        console.log('entrou no else');
         cont = cont-1
       }
       $(listaInfo["convidados"]).val(cont)
       $(".convidadosInfo").css("color", "white")
     })
      
+    
     function exibeCtt() {
-      HTMLItemCtt = ''
+      var HTMLItemCtt = '';
       for (i = 0; i < dbCtt.data.length; i++) {
-                let cttDados = dbCtt.data[i];
+              let cttDados = dbCtt.data[i];
+              if(!HTMLItemCtt.includes(cttDados.nome)) {
                 HTMLItemCtt += `
-                    <div class="row">
-                        <div class="col-md-1">
-                          <div class="form-check">
-                            <label class="form-check-label">
-                            <input class="form-check-input habilitarInput" id="inputRedesChecar" type="checkbox" id="convidado" value="1" disabled>
-                              <span class="form-check-sign">
-                                <span class="check"></span>
-                              </span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-md-3">
-                          <div class="photo">
-                            <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
-                          </div>
-                        </div>
-                        <div class="col-md-5">
-                          <h6>${cttDados.nome}</h6>
-                          <p>${cttDados.desc}</p>
+                  <div class="row">
+                      <div class="col-md-1">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                          <input class="form-check-input habilitarInput" id="inputRedesChecar" type="checkbox" id="convidado" value="1" disabled>
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
                         </div>
                       </div>
-                      <hr>
+                      <div class="col-md-3">
+                        <div class="photo">
+                          <img src="../assets/img/anime3.png" alt="Profile Photo" width="50" height="50">
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <h6>${cttDados.nome}</h6>
+                        <p>${cttDados.desc}</p>
+                      </div>
+                    </div>
+                    <hr>
                 `;
+              }
                 // saidaResultadoCtt.insertAdjacentHTML("beforeend", HTMLItemCtt)
             }
             saidaResultadoCtt.innerHTML = HTMLItemCtt
