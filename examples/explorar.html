@@ -25,13 +25,12 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">    
 			<div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <i class="tim-icons icon-simple-remove"></i>
-                        </button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="tim-icons icon-simple-remove"></i>
+                </button>
 				<input type="text" class="form-control" id="inlineFormInputGroup" style="box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);" placeholder="Adicione um comentario">
 				<button type="submit" class="btn btn-fill btn-primary" style="background-color: #de4ecc!important; " id="btnComentar">Comentar</button>
                 <div id="comentarios">
-                    <hr>
                 </div>
 			</div>
           </div>
@@ -297,11 +296,37 @@
     </script>
 	<script>
 		var comentarios = '';
-		$('#btnComentar').click(function () {
-			var text = $('#inlineFormInputGroup').val();
+		$('#btnComentar').click(function (id) {
+			/*var text = $('#inlineFormInputGroup').val();
 			comentarios += `<p class="form-control">${text}</p><hr>`
-			$('#comentarios').html(comentarios);
+			$('#comentarios').html(comentarios);*/
+
+            let campoId = id;
+
+            let campoNome = $("#inputNome").val();
+            let campoComentario = $("#inputComentario").val();
+
+            let coment = { nome: campoNome, comentario: campoComentario };
+
+            insertComentario(parseInt(campoId), coment);
+
+            exibeComentarios(campoId);
+
 		})
+
+        function exibeComentarios(campoId) {
+            var HtmlItemComent = '';
+            for(var i = 0; i < dbCalc.data[campoId].comentarios.length; i++) {
+                let comentDados = dbCalc.data[campoId].comentarios[i];
+                HtmlItemComent += `
+                <hr>
+                <h6>${ comentDados.nome }</h6>
+                <p style="font-size: 15px; margin-top: 10px">${ comentDados.comentario }</p>
+                `
+            }
+
+            document.getElementById('comentarios').innerHTML = HtmlItemComent;
+        }
 	</script>
 </body>
 
