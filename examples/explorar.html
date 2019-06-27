@@ -100,13 +100,11 @@
                         </ul>
                       </div>
                     </div>
-                  </nav>
+            </nav>
             <!-- End Navbar -->
 
             <div class="content" id="tdsCalcs">
-                <div class="row">
-
-                </div>
+                
             </div>
             <footer class="footer"></footer>
         </div>
@@ -116,7 +114,6 @@
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/core/bootstrap.min.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <script src="../assets/js/plugins/chartjs.min.js"></script>
     <script src="../assets/js/plugins/bootstrap-notify.js"></script>
     <script src="../assets/js/black-dashboard.min.js?v=1.0.0"></script>
@@ -125,15 +122,14 @@
     <script>
 
         var saidaResultado = document.getElementById("tdsCalcs")
-        var i, j, HTMLItem = '', produto, qtd, count
-        var par = 00000  
-        
-        
+        var i, j, HTMLItem = '', produto, qtd, count, marcador = '', marcadorFinal = ''
+            
         for (j = 0; j < dbCalc.data.length; j++) { 
+            var marcador = '', marcadorFinal = ''
             if(dbCalc.data[j] != null){
-            HTMLItem = `
-            <div class="row">
-                        <div class="col-md-6">
+               // if(j==0 || j%2==0){marcador="<div class='row'>"}else{marcadorFinal="</div>"}
+                HTMLItem = `${marcador}
+                        <div class="col-xs-12 col-md-6">
                                     <div class="card ">
                                         <div class="card-header">
                                             <h4 class="card-title"> Calculadora</h4>
@@ -155,8 +151,6 @@
                                                         for (i = 0; i < dbCalc.data[j].produto.length; i++) { 
                                                         if(dbCalc.data[j].produto[i] != null){
                                                             HTMLItem += `<tr> 
-
-                                                                     
                                                             <td>
                                                                 ${dbCalc.data[j].produto[i]}
                                                             </td>
@@ -172,15 +166,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>`;
+                            ${marcador}`;
 
                 saidaResultado.insertAdjacentHTML("beforeend", HTMLItem)
             }
             // saidaResultado.innerHTML = HTMLItem
         }
-
-
-
 
     </script>
     <script>
