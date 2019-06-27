@@ -27,8 +27,8 @@
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title" style="color: black;">Comentarios</h4>
-              <button id="closeModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span></button>
+              <button id="closeModal" type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="functionClose()">
+                <span aria-hidden="true" onclick="functionClose()">&times;</span></button>
             </div>
             <div class="modal-body" id="login">
               <div class="form-group">
@@ -134,10 +134,9 @@
     <script>
 
     // var modal = document.getElementById("comentarioModal");
-        
-        
-
-
+    function functionClose(){
+        $("#comentarioModal").hide()
+    }
         var saidaResultado = document.getElementById("tdsCalcs")
         var i, j, HTMLItem = '', produto, qtd, count, marcador = '', marcadorFinal = ''
             
