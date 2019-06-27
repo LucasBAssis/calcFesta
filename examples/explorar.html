@@ -21,21 +21,28 @@
 </head>
 
 <body class="">
-    <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+        <div class="modal" id="comentarioModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+        style="margin-top:75p; display: none">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">    
-			<div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i class="tim-icons icon-simple-remove"></i>
-                </button>
-				<input type="text" class="form-control" id="inlineFormInputGroup" style="box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);" placeholder="Adicione um comentario">
-				<button type="submit" class="btn btn-fill btn-primary" style="background-color: #de4ecc!important; " id="btnComentar">Comentar</button>
-                <div id="comentarios">
-                </div>
-			</div>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" style="color: black;">Comentarios</h4>
+              <button id="closeModal" type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="functionClose()">
+                <span aria-hidden="true" onclick="functionClose()">&times;</span></button>
+            </div>
+            <div class="modal-body" id="login">
+              <div class="form-group">
+                <label class="control-label" style="color: #000;">Digite o seu comentario  aqui:</label><br>
+                <input name="username" style="color: black; border-color: #f1f1f1;" type="text" class="form-control" placeholder="O que achou da calc? Comente :)" id="usuario_login" required>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" style="background-color: #de4ecc!important" id="btn_login">Comentar</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
     <div class="wrapper">
         <div class="sidebar">
             <div class="sidebar-wrapper">
@@ -126,6 +133,10 @@
     <script src="../js/fakedbCalc.js"></script>
     <script>
 
+    // var modal = document.getElementById("comentarioModal");
+    function functionClose(){
+        $("#comentarioModal").hide()
+    }
         var saidaResultado = document.getElementById("tdsCalcs")
         var i, j, HTMLItem = '', produto, qtd, count, marcador = '', marcadorFinal = ''
             
@@ -166,7 +177,11 @@
                                                         }
                                                     }
                                         HTMLItem += `</tbody>
+                                        
                                                 </table>
+                                                <div class="card-footer">
+                                                <button type="submit" class="btn btn-fill btn-primary" onclick="myFunction()" id="comentarCalc">Comentar</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -177,7 +192,10 @@
             }
             // saidaResultado.innerHTML = HTMLItem
         }
-
+        function myFunction() {
+        var btn = document.getElementById("comentarCalc");
+            $("#comentarioModal").show()
+        }
     </script>
     <script>
         $(document).ready(function () {
